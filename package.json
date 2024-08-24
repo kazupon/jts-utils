@@ -2,9 +2,28 @@
   "name": "@kazupon/jts-utils",
   "description": "Opinionated collection of JavaScript / TypeScript utils by @kazupon",
   "version": "0.0.0",
-  "author": "",
+  "author": {
+    "email": "kawakazu80@gmail.com",
+    "name": "kazuya kawaguchi"
+  },
   "license": "MIT",
-  "keywords": [],
+  "funding": "https://github.com/sponsors/kazupon",
+  "bugs": {
+    "url": "https://github.com/kazupon/jts-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazupon/jts-utils.git"
+  },
+  "keywords": ["javascript", "typescript", "utils", "utilities"],
+  "homepage": "https://github.com/kazupon/jts-utils#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@9.7.1",
+  "engines": {
+    "node": ">= 18.18"
+  },
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -13,7 +32,9 @@
     "fix:prettier": "prettier . --write",
     "lint": "run-p \"lint:* {@}\" --",
     "lint:eslint": "eslint --flag unstable_ts_config .",
-    "lint:prettier": "prettier . --check"
+    "lint:prettier": "prettier . --check",
+    "test": "vitest",
+    "typecheck": "tsc -p ."
   },
   "devDependencies": {
     "@kazupon/eslint-config": "^0.13.3",
