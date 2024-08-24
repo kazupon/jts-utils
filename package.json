@@ -68,7 +68,9 @@
     "prepack": "pnpm build",
     "prepare": "git config --local core.hooksPath .githooks",
     "release": "bumpp --commit \"release: v%s\" --all --push --tag",
-    "test": "vitest",
+    "test": "run-s \"test:* {@}\" --",
+    "test:type": "vitest run --typecheck",
+    "test:unit": "vitest run",
     "typecheck": "tsc -p ."
   },
   "devDependencies": {
