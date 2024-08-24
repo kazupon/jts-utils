@@ -75,6 +75,9 @@
     "./types": {
       "types": "./dist/types/index.d.ts"
     },
+    "./types/vue": {
+      "types": "./dist/types/vue.d.ts"
+    },
     "./dist/*": "./dist/*",
     "./*": "./*"
   },
@@ -104,10 +107,19 @@
     "test:unit": "vitest run",
     "typecheck": "tsc -p ."
   },
+  "peerDependencies": {
+    "@vue/reactivity": "^3.4"
+  },
+  "peerDependenciesMeta": {
+    "@vue/reactivity": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@kazupon/eslint-config": "^0.14.1",
     "@kazupon/prettier-config": "^0.1.1",
     "@types/node": "^22.5.0",
+    "@vue/reactivity": "^3.4.38",
     "bumpp": "^9.5.2",
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
