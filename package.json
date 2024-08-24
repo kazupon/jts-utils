@@ -51,6 +51,13 @@
       "browser": "./dist/array/index.mjs",
       "default": "./dist/array/index.mjs"
     },
+    "./string": {
+      "types": "./dist/string/index.d.ts",
+      "import": "./dist/string/index.mjs",
+      "require": "./dist/string/index.cjs",
+      "browser": "./dist/string/index.mjs",
+      "default": "./dist/string/index.mjs"
+    },
     "./observer": {
       "types": "./dist/observer/index.d.ts",
       "import": "./dist/observer/index.mjs",
