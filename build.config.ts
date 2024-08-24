@@ -5,6 +5,7 @@ const config: ReturnType<typeof defineBuildConfig> = defineBuildConfig({
     'src/index.ts',
     'src/array/index.ts',
     'src/string/index.ts',
+    'src/observer/index.ts',
     'src/module/index.ts',
     'src/types/index.ts'
   ],
