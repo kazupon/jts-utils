@@ -1,4 +1,4 @@
-import type { Awaitable, InteropModuleDefault } from './types'
+import type { Awaitable, InteropModuleDefault } from '../types'
 
 /**
  * resolve module with interop default
