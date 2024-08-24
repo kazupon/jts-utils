@@ -5,7 +5,6 @@ Opinionated collection of JavaScript / TypeScript utilities by @kazupon
 > [!NOTE]
 > 🚧 THIS IS WORK IN PROGRESS
 
-
 ✅️ &nbsp;**Modern:** ES Modules first and respect Web Standard
 
 ✅️ &nbsp;**Compatible:** Support CommonJS and various JS environments
