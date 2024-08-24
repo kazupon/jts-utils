@@ -105,7 +105,7 @@
     "typecheck": "tsc -p ."
   },
   "devDependencies": {
-    "@kazupon/eslint-config": "^0.14.0",
+    "@kazupon/eslint-config": "^0.14.1",
     "@kazupon/prettier-config": "^0.1.1",
     "@types/node": "^22.5.0",
     "bumpp": "^9.5.2",
