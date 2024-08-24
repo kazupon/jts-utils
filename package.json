@@ -44,6 +44,13 @@
       "browser": "./dist/index.mjs",
       "default": "./dist/index.mjs"
     },
+    "./array": {
+      "types": "./dist/array/index.d.ts",
+      "import": "./dist/array/index.mjs",
+      "require": "./dist/array/index.cjs",
+      "browser": "./dist/array/index.mjs",
+      "default": "./dist/array/index.mjs"
+    },
     "./module": {
       "types": "./dist/module/index.d.ts",
       "import": "./dist/module/index.mjs",
