@@ -1,5 +1,12 @@
 import { test, expectTypeOf } from 'vitest'
-import type { Awaitable, InteropModuleDefault } from './index.js'
+import type {
+  Awaitable,
+  InteropModuleDefault,
+  UnionToIntersection,
+  LastInUnion,
+  UnionToTuple,
+  IsNever
+} from './index.js'
 
 test('Awaitable', () => {
   expectTypeOf<Awaitable<number>>().toEqualTypeOf<number | Promise<number>>()
@@ -8,4 +15,25 @@ test('Awaitable', () => {
 test('InteropModuleDefault', () => {
   expectTypeOf<InteropModuleDefault<number>>().toEqualTypeOf<number>()
   expectTypeOf<InteropModuleDefault<{ default: number }>>().toEqualTypeOf<number>()
+})
+
+test('UnionToIntersection', () => {
+  expectTypeOf<UnionToIntersection<{ a: string } | { b: number }>>().toEqualTypeOf<
+    { a: string } & { b: number }
+  >()
+})
+
+test('LastInUnion', () => {
+  expectTypeOf<LastInUnion<{ a: string } | { b: number }>>().toEqualTypeOf<{ b: number }>()
+})
+
+test('UnionToTuple', () => {
+  expectTypeOf<UnionToTuple<{ a: string } | { b: number }>>().toEqualTypeOf<
+    [{ a: string }, { b: number }]
+  >()
+})
+
+test('IsNever', () => {
+  expectTypeOf<IsNever<never>>().toEqualTypeOf<true>()
+  expectTypeOf<IsNever<number>>().toEqualTypeOf<false>()
 })
