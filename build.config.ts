@@ -7,7 +7,8 @@ const config: ReturnType<typeof defineBuildConfig> = defineBuildConfig({
     'src/string/index.ts',
     'src/observer/index.ts',
     'src/module/index.ts',
-    'src/types/index.ts'
+    'src/types/index.ts',
+    'src/types/vue.ts'
   ],
   declaration: true,
   rollup: {
