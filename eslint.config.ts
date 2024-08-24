@@ -35,7 +35,7 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
   toml(),
   prettier(),
   {
-    ignores: ['tsconfig.json']
+    ignores: ['tsconfig.json', '**/dist/**']
   }
 )
 
