@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { pascalize } from './index.js'
+import { pascalize } from './index.ts'
 
 test('pascalize', () => {
   expect(pascalize('hello')).toBe('Hello')

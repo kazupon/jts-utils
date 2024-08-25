@@ -6,7 +6,7 @@ import type {
   LastInUnion,
   UnionToTuple,
   IsNever
-} from './index.js'
+} from './index.ts'
 
 test('Awaitable', () => {
   expectTypeOf<Awaitable<number>>().toEqualTypeOf<number | Promise<number>>()
