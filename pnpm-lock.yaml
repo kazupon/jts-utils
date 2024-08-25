@@ -68,7 +68,7 @@ importers:
       npm-run-all2:
         specifier: ^6.2.2
         version: 6.2.2
-      playwright:
+      playwright-core:
         specifier: ^1.46.1
         version: 1.46.1
       prettier:
@@ -4803,6 +4803,7 @@ snapshots:
       playwright-core: 1.46.1
     optionalDependencies:
       fsevents: 2.3.2
+    optional: true
 
   pluralize@8.0.0: {}
 

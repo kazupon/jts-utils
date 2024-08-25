@@ -136,7 +136,7 @@
     "jiti": "^1.21.6",
     "lint-staged": "^15.2.9",
     "npm-run-all2": "^6.2.2",
-    "playwright": "^1.46.1",
+    "playwright-core": "^1.46.1",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.2.0",
