@@ -102,6 +102,36 @@ jobs:
       - name: Testing
         run: deno task test
 
+  bun:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+
+    name: Test on Bun
+    steps:
+      - name: Checkout codes
+        uses: actions/checkout@v4
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Testing
+        run: bunx vitest run
+
   build:
     runs-on: ${{ matrix.os }}
     strategy:

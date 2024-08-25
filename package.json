@@ -104,6 +104,7 @@
     "release": "bumpp --commit \"release: v%s\" --all --push --tag",
     "test": "run-s \"test:unit\" \"test:browser\"",
     "test:browser": "vitest run --browser.provider=playwright --browser.name=chromium --browser.headless",
+    "test:bun": "bunx vitest run",
     "test:deno": "DENO_FUTURE=1 deno run -A npm:vitest run",
     "test:unit": "vitest run --typecheck",
     "typecheck": "tsc -p ."
