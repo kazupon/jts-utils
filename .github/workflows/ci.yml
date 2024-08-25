@@ -100,7 +100,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Testing
-        run: deno task test
+        run: pnpm test:deno
 
   bun:
     needs:

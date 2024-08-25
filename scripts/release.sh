@@ -19,4 +19,4 @@ echo "⚡ Publishing $PKG with tag $TAG for npm registory"
 pnpm publish --access public --no-git-checks --tag $TAG
 
 echo "⚡ Publishing $PKG for jsr registory"
-deno publish -c jsr.json
+pnpx jsr publish -c jsr.json
