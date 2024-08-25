@@ -15,6 +15,8 @@ Opinionated collection of JavaScript / TypeScript utilities by @kazupon
 
 ✅️️ &nbsp;**Type Strong:** Written in TypeScript, with full JSdoc
 
+✅️️ &nbsp;**Universal Runtime:** Support Browser, Node.js, Deno, Bun and other!
+
 ## 💿 Installation
 
 ```sh
