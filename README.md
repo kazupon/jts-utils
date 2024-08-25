@@ -1,6 +1,7 @@
 # @kazupon/jts-utils
 
-[![npm version][npm-version-src]][npm-version-href]
+[![npm][npm-src]][npm-href]
+[![JSR][jsr-src]][jsr-href]
 [![CI][ci-src]][ci-href]
 
 Opinionated collection of JavaScript / TypeScript utilities by @kazupon
@@ -20,8 +21,17 @@ Opinionated collection of JavaScript / TypeScript utilities by @kazupon
 ## 💿 Installation
 
 ```sh
-npm i @kazupon/jts-utils
+# Using npm
+npm install @kazupon/jts-utils
+
+# Using pnpm
+pnpm add @kazupon/jts-utils
+
+# Using yarn
+yarn add @kazupon/jts-utils
 ```
+
+<!-- TODO: Deno and Bun -->
 
 ## 🙌 Contributing guidelines
 
@@ -33,9 +43,17 @@ If you are interested in contributing to `@kazupon/jts-utils`, I highly recommen
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/@kazupon/jts-utils?style=flat
-[npm-version-href]: https://npmjs.com/package/@kazupon/jts-utils
-[npm-downloads-src]: https://img.shields.io/npm/dm/@kazupon/jts-utils?style=flat
-[npm-downloads-href]: https://npmjs.com/package/@kazupon/jts-utils
+[npm-src]: https://img.shields.io/npm/v/@kazupon/jts-utils?style=flat
+[npm-href]: https://npmjs.com/package/@kazupon/jts-utils
+[jsr-src]: https://jsr.io/badges/@kazupon/jts-utils
+[jsr-href]: https://jsr.io/@kazupon/jts-utils
 [ci-src]: https://github.com/kazupon/jts-utils/actions/workflows/ci.yml/badge.svg
 [ci-href]: https://github.com/kazupon/jts-utils/actions/workflows/ci.yml
+
+<!-- TODO: -->
+
+[npm-downloads-src]: https://img.shields.io/npm/dm/@kazupon/jts-utils?style=flat
+
+<!-- TODO: -->
+
+[npm-downloads-href]: https://npmjs.com/package/@kazupon/jts-utils
