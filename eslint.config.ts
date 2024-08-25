@@ -10,7 +10,8 @@ import {
   yml,
   toml,
   prettier,
-  jsdoc
+  jsdoc,
+  vitest
 } from '@kazupon/eslint-config'
 
 const config: ReturnType<typeof defineConfig> = defineConfig(
@@ -33,6 +34,9 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
     prettier: true
   }),
   toml(),
+  vitest({
+    typeTesting: true
+  }),
   prettier(),
   {
     ignores: ['tsconfig.json', '**/dist/**']
