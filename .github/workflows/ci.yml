@@ -75,7 +75,7 @@ jobs:
   deno:
     needs:
       - build
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     name: Test on Deno
     steps:
