@@ -36,14 +36,12 @@ yarn add @kazupon/jts-utils
 ### 🦕 Deno
 
 ```sh
-# Using deno
 deno add @kazupon/jts-utils
 ```
 
 ### 🥟 Bun
 
 ```sh
-# Using bun
 bun add @kazupon/jts-utils
 ```
 
