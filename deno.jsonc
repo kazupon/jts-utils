@@ -1,5 +1,6 @@
 {
   "tasks": {
     "test": "DENO_FUTURE=1 deno run -A npm:vitest run"
-  }
+  },
+  "version": "0.2.2"
 }
