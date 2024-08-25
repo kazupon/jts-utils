@@ -1,0 +1,9 @@
+{
+  "name": "node",
+  "private": true,
+  "type": "module",
+  "module": "index.mjs",
+  "dependencies": {
+    "@kazupon/jts-utils": "^0.2.5"
+  }
+}

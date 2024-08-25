@@ -20,9 +20,11 @@ Opinionated collection of JavaScript / TypeScript utilities by @kazupon
 
 ## 💿 Installation
 
+### 🐢 Node.js
+
 ```sh
 # Using npm
-npm install @kazupon/jts-utils
+npm install @kazupon/jts-utils --save
 
 # Using pnpm
 pnpm add @kazupon/jts-utils
@@ -31,7 +33,36 @@ pnpm add @kazupon/jts-utils
 yarn add @kazupon/jts-utils
 ```
 
-<!-- TODO: Deno and Bun -->
+### 🦕 Deno
+
+```sh
+# Using deno
+deno add @kazupon/jts-utils
+```
+
+### 🥟 Bun
+
+```sh
+# Using bun
+bun add @kazupon/jts-utils
+```
+
+### 🌍 Browser
+
+in your HTML:
+
+```html
+<script type="module">
+  /**
+   * you can install via other CDN URL such as skypack,
+   * or, you can also use import maps
+   */
+  import { pascalize } from 'https://esm.sh/@kazupon/jts-utils'
+
+  // something todo
+  // ...
+</script>
+```
 
 ## 🙌 Contributing guidelines
 
