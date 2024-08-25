@@ -66,6 +66,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install Playwright
+        run: pnpm playwright-core install chromium
+
       - name: Testing
         run: pnpm test
 
@@ -103,7 +106,7 @@ jobs:
         node-version: [18]
         os: [ubuntu-latest]
 
-    name: Test on Node.js ${{ matrix.node-version }}
+    name: Type Checking on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
         uses: actions/checkout@v4
