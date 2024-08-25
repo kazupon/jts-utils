@@ -2,7 +2,7 @@
   "name": "@kazupon/jts-utils",
   "version": "0.2.2",
   "publish": {
-    "include": ["src"]
+    "include": ["src", "package.json", "jsr.json", "README.md", "CHANGELOG.md", "LICENSE"]
   },
   "exports": {
     ".": "./src/index.ts",

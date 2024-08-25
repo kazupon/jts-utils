@@ -17,6 +17,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
       - name: Enable corepack
         run: corepack enable
 
