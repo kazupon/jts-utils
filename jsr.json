@@ -1,0 +1,14 @@
+{
+  "name": "@kazupon/jts-utils",
+  "version": "0.2.0",
+  "publish": {
+    "include": ["src"]
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./array": "./src/array/index.ts",
+    "./string": "./src/string/index.ts",
+    "./observer": "./src/observer/index.ts",
+    "./module": "./src/module/index.ts"
+  }
+}

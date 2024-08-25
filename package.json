@@ -95,6 +95,7 @@
     "fix": "run-p \"fix:* {@}\" --",
     "fix:eslint": "eslint --flag unstable_ts_config . --fix",
     "fix:prettier": "prettier . --write",
+    "jsr": "pnpx pkg-to-jsr",
     "lint": "run-p \"lint:* {@}\" --",
     "lint:eslint": "eslint --flag unstable_ts_config .",
     "lint:prettier": "prettier . --check",
