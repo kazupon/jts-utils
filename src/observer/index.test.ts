@@ -1,5 +1,5 @@
 import { vi, expect, test } from 'vitest'
-import { observe } from './index.js'
+import { observe } from './index.ts'
 
 interface State {
   a: number
