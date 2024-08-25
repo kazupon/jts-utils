@@ -72,6 +72,24 @@ jobs:
       - name: Testing
         run: pnpm test
 
+  deno:
+    needs:
+      - build
+    runs-on: ${{ matrix.os }}
+
+    name: Test on Deno
+    steps:
+      - name: Checkout codes
+        uses: actions/checkout@v4
+
+      - name: Setup deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Testing
+        run: deno task test
+
   build:
     runs-on: ${{ matrix.os }}
     strategy:

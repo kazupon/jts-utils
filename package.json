@@ -102,8 +102,9 @@
     "prepack": "pnpm build",
     "prepare": "git config --local core.hooksPath .githooks",
     "release": "bumpp --commit \"release: v%s\" --all --push --tag",
-    "test": "run-s \"test:* {@}\" --",
+    "test": "run-s \"test:unit\" \"test:browser\"",
     "test:browser": "vitest run --browser.provider=playwright --browser.name=chromium --browser.headless",
+    "test:deno": "DENO_FUTURE=1 deno run -A npm:vitest run",
     "test:unit": "vitest run --typecheck",
     "typecheck": "tsc -p ."
   },
