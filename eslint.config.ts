@@ -39,7 +39,7 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
   }),
   prettier(),
   {
-    ignores: ['**/tsconfig.json', '**/dist/**', 'playground/deno/mod.ts']
+    ignores: ['**/tsconfig.json', '**/dist/**', 'playground/**/*.ts']
   }
 )
 
