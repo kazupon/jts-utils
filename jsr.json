@@ -1,8 +1,10 @@
 {
   "name": "@kazupon/jts-utils",
+  "description": "Opinionated collection of JavaScript / TypeScript utils by @kazupon",
   "version": "0.2.3",
   "publish": {
-    "include": ["src", "package.json", "jsr.json", "README.md", "CHANGELOG.md", "LICENSE"]
+    "include": ["src/**/*.ts", "package.json", "jsr.json", "README.md", "CHANGELOG.md", "LICENSE"],
+    "exclude": ["src/**/*.test.ts", "src/**/*.test-d.ts"]
   },
   "exports": {
     ".": "./src/index.ts",

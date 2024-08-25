@@ -11,16 +11,16 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
       - name: Checkout codes
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
 
       - name: Enable corepack
         run: corepack enable
