@@ -66,9 +66,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install Playwright
-        run: pnpm exec playwright install
-
       - name: Install Playwright Core
         run: pnpm playwright-core install chromium
 
