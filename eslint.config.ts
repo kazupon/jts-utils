@@ -1,17 +1,17 @@
 import {
+  comments,
   defineConfig,
   javascript,
-  typescript,
-  comments,
-  promise,
-  unicorn,
-  regexp,
-  jsonc,
-  yml,
-  toml,
-  prettier,
   jsdoc,
-  vitest
+  jsonc,
+  prettier,
+  promise,
+  regexp,
+  toml,
+  typescript,
+  unicorn,
+  vitest,
+  yml
 } from '@kazupon/eslint-config'
 
 const config: ReturnType<typeof defineConfig> = defineConfig(
@@ -40,6 +40,11 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
   prettier(),
   {
     ignores: ['**/tsconfig.json', '**/dist/**', 'playground/**/*.ts']
+  },
+  {
+    rules: {
+      'unicorn/expiring-todo-comments': 'off'
+    }
   }
 )
 
