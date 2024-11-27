@@ -72,8 +72,8 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       playwright-core:
-        specifier: 1.46.1
-        version: 1.46.1
+        specifier: 1.49.0
+        version: 1.49.0
       prettier:
         specifier: ^3.4.1
         version: 3.4.1
@@ -2074,8 +2074,8 @@ packages:
   pkg-types@1.2.1:
     resolution: {integrity: sha512-sQoqa8alT3nHjGuTjuKgOnvjo4cljkufdtLMnO2LBP/wRwuDlo1tkaEdMxCRhyGRPacv/ztlZgDPm2b7FAmEvw==}
 
-  playwright-core@1.46.1:
-    resolution: {integrity: sha512-h9LqIQaAv+CYvWzsZ+h3RsrqCStkBHlgo6/TJlFst3cOTlLghBQlJwPOZKQJTKNaD3QIB7aAVQ+gfWbN3NXB7A==}
+  playwright-core@1.49.0:
+    resolution: {integrity: sha512-R+3KKTQF3npy5GTiKH/T+kdhoJfJojjHESR1YEWhYuEKRVfVaxH3+4+GvXE5xyCngCxhxnykk0Vlah9v8fs3jA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4687,7 +4687,7 @@ snapshots:
       mlly: 1.7.3
       pathe: 1.1.2
 
-  playwright-core@1.46.1: {}
+  playwright-core@1.49.0: {}
 
   pluralize@8.0.0: {}
 
