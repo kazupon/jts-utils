@@ -31,6 +31,36 @@ export type UnionToTuple<U, Last = LastInUnion<U>> = [U] extends [never]
   : [...UnionToTuple<Exclude<U, Last>>, Last]
 
 /**
+ * Merge two types
+ */
+export type Merge<F, S> = {
+  [K in keyof F | keyof S]: K extends keyof S ? S[K] : K extends keyof F ? F[K] : never
+}
+
+/**
  * Check never type
  */
 export type IsNever<T> = [T] extends [never] ? true : false
+
+/**
+ * whether the type is null
+ */
+export type IsNull<T> = T extends null ? true : false
+
+/**
+ * whether the type is object
+ */
+export type IsObject<T> = T extends object
+  ? T extends Function // eslint-disable-line @typescript-eslint/no-unsafe-function-type
+    ? false
+    : true
+  : false
+
+/**
+ * whether the type is a plain object
+ */
+export type IsPlainObject<T> = T extends object
+  ? T extends Function | Array<any> | null // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-function-type
+    ? false
+    : true
+  : false
