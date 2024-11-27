@@ -1,7 +1,7 @@
 {
   "name": "@kazupon/jts-utils",
   "description": "Opinionated collection of JavaScript / TypeScript utils by @kazupon",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "author": {
     "email": "kawakazu80@gmail.com",
     "name": "kazuya kawaguchi"
