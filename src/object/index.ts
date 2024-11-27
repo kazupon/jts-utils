@@ -41,7 +41,7 @@ export const toRawType = (value: unknown): string =>
 
 /**
  * create a new object
- * @description this utility is sugar function of `Object.create` function, accpet same arguments, which is prototype object.
+ * @description this utility is sugar function of `Object.create` function, accept same arguments, which is prototype object.
  * @param object an object, default is null
  * @returns a new object
  */
