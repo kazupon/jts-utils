@@ -1,3 +1,5 @@
+import { Merge } from '../types/index.ts'
+
 /**
  * Check if a value is an object
  * @param value a value to check
@@ -36,10 +38,6 @@ export const toTypeString = (value: unknown): string => objectToString.call(valu
 export const toRawType = (value: unknown): string =>
   // prettier-ignore
   toTypeString(value).slice(8, -1)
-
-type Merge<F, S> = {
-  [K in keyof F | keyof S]: K extends keyof S ? S[K] : K extends keyof F ? F[K] : never
-}
 
 /**
  * create a new object
