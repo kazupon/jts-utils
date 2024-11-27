@@ -154,7 +154,7 @@
   },
   "pnpm": {
     "overrides": {
-      "vite": "5.4.6"
+      "vite": "5.4.11"
     }
   },
   "prettier": "@kazupon/prettier-config",
