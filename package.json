@@ -128,7 +128,7 @@
     "@kazupon/eslint-config": "^0.18.0",
     "@kazupon/prettier-config": "^0.1.1",
     "@types/node": "^22.10.0",
-    "@vitest/browser": "^2.1.6",
+    "@vitest/browser": "2.0.5",
     "@vitest/eslint-plugin": "^1.1.11",
     "@vue/reactivity": "^3.5.13",
     "bumpp": "^9.8.1",
@@ -145,12 +145,12 @@
     "jiti": "^2.4.0",
     "lint-staged": "^15.2.10",
     "npm-run-all2": "^6.2.6",
-    "playwright-core": "^1.49.0",
+    "playwright-core": "1.46.1",
     "prettier": "^3.4.1",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.16.0",
     "unbuild": "3.0.0-rc.11",
-    "vitest": "^2.1.6"
+    "vitest": "2.0.5"
   },
   "pnpm": {
     "overrides": {
