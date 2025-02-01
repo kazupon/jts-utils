@@ -144,7 +144,7 @@
     "gh-changelogen": "^0.2.8",
     "jiti": "^2.4.0",
     "lint-staged": "^15.2.10",
-    "npm-run-all2": "^6.2.6",
+    "npm-run-all2": "^7.0.0",
     "playwright-core": "1.50.1",
     "prettier": "^3.4.1",
     "typescript": "^5.7.2",
