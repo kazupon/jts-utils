@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@kazupon/eslint-config':
         specifier: ^0.19.0
-        version: 0.19.0(@vitest/eslint-plugin@1.1.26(@typescript-eslint/utils@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5))(@vue/reactivity@3.5.13)(eslint-config-prettier@9.1.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsdoc@50.6.3(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsonc@2.19.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-promise@7.2.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-regexp@2.7.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-toml@0.12.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-unicorn@55.0.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-yml@1.16.0(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))(typescript-eslint@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))
+        version: 0.19.0(@vitest/eslint-plugin@1.1.26(@typescript-eslint/utils@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5))(@vue/reactivity@3.5.13)(eslint-config-prettier@9.1.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsdoc@50.6.3(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsonc@2.19.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-promise@7.2.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-regexp@2.7.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-toml@0.12.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-unicorn@56.0.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-yml@1.16.0(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))(typescript-eslint@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))
       '@kazupon/prettier-config':
         specifier: ^0.1.1
         version: 0.1.1
@@ -51,8 +51,8 @@ importers:
         specifier: ^0.12.0
         version: 0.12.0(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-unicorn:
-        specifier: ^55.0.0
-        version: 55.0.0(eslint@9.19.0(jiti@2.4.2))
+        specifier: ^56.0.0
+        version: 56.0.1(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-yml:
         specifier: ^1.16.0
         version: 1.16.0(eslint@9.19.0(jiti@2.4.2))
@@ -1417,8 +1417,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-plugin-unicorn@55.0.0:
-    resolution: {integrity: sha512-n3AKiVpY2/uDcGrS3+QsYDkjPfaOrNrsfQxU9nt5nitd9KuvVXrfAvgCO9DYPSfap+Gqjw9EOrXIsBp5tlHZjA==}
+  eslint-plugin-unicorn@56.0.1:
+    resolution: {integrity: sha512-FwVV0Uwf8XPfVnKSGpMg7NtlZh0G0gBarCaFcMUOoqPxXryxdYxTRRv4kH6B9TFCVIrjRXG+emcxIk2ayZilog==}
     engines: {node: '>=18.18'}
     peerDependencies:
       eslint: '>=8.56.0'
@@ -3169,7 +3169,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@kazupon/eslint-config@0.19.0(@vitest/eslint-plugin@1.1.26(@typescript-eslint/utils@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5))(@vue/reactivity@3.5.13)(eslint-config-prettier@9.1.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsdoc@50.6.3(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsonc@2.19.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-promise@7.2.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-regexp@2.7.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-toml@0.12.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-unicorn@55.0.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-yml@1.16.0(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))(typescript-eslint@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))':
+  '@kazupon/eslint-config@0.19.0(@vitest/eslint-plugin@1.1.26(@typescript-eslint/utils@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5))(@vue/reactivity@3.5.13)(eslint-config-prettier@9.1.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsdoc@50.6.3(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsonc@2.19.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-promise@7.2.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-regexp@2.7.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-toml@0.12.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-unicorn@56.0.1(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-yml@1.16.0(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))(typescript-eslint@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))':
     dependencies:
       '@eslint-community/eslint-plugin-eslint-comments': 4.4.1(eslint@9.19.0(jiti@2.4.2))
       '@eslint/js': 9.19.0
@@ -3185,7 +3185,7 @@ snapshots:
       eslint-plugin-promise: 7.2.1(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-regexp: 2.7.0(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-toml: 0.12.0(eslint@9.19.0(jiti@2.4.2))
-      eslint-plugin-unicorn: 55.0.0(eslint@9.19.0(jiti@2.4.2))
+      eslint-plugin-unicorn: 56.0.1(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-yml: 1.16.0(eslint@9.19.0(jiti@2.4.2))
       typescript-eslint: 8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
     transitivePeerDependencies:
@@ -4008,7 +4008,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-unicorn@55.0.0(eslint@9.19.0(jiti@2.4.2)):
+  eslint-plugin-unicorn@56.0.1(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       '@babel/helper-validator-identifier': 7.25.9
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.19.0(jiti@2.4.2))
