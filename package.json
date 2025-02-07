@@ -25,7 +25,11 @@
   "publishConfig": {
     "access": "public"
   },
+<<<<<<< HEAD
   "packageManager": "pnpm@9.15.4",
+=======
+  "packageManager": "pnpm@10.2.1",
+>>>>>>> b06a0a3 (chore: update deps)
   "engines": {
     "node": ">= 18.18"
   },
@@ -99,22 +103,22 @@
   "scripts": {
     "build": "unbuild",
     "changelog": "gh-changelogen --repo=kazupon/jts-utils",
-    "fix": "run-p \"fix:* {@}\" --",
-    "fix:eslint": "eslint --flag unstable_ts_config . --fix",
+    "fix": "pnpm run --parallel --color \"/fix:.*/\"",
+    "fix:eslint": "eslint . --fix",
     "fix:prettier": "prettier . --write",
     "jsr": "pnpx pkg-to-jsr",
-    "lint": "run-p \"lint:* {@}\" --",
-    "lint:eslint": "eslint --flag unstable_ts_config .",
+    "lint": "pnpm run --parallel --color \"/lint:.*/\"",
+    "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
     "prepack": "pnpm build",
     "prepare": "git config --local core.hooksPath .githooks",
     "release": "bumpp --commit \"release: v%s\" --all --push --tag",
-    "test": "run-s \"test:unit\"",
+    "test": "pnpm run --stream --sequential --color \"/test:unit/\"",
     "test:browser": "vitest run --browser.provider=playwright --browser.name=chromium --browser.headless",
     "test:bun": "bunx vitest run",
     "test:deno": "DENO_FUTURE=1 deno run -A npm:vitest run",
     "test:unit": "vitest run --typecheck",
-    "typecheck": "tsc -p ."
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "@vue/reactivity": "^3.4"
@@ -127,45 +131,38 @@
   "devDependencies": {
     "@kazupon/eslint-config": "^0.19.0",
     "@kazupon/prettier-config": "^0.1.1",
-    "@types/node": "^22.10.0",
-    "@vitest/browser": "2.1.8",
-    "@vitest/eslint-plugin": "^1.1.11",
+    "@types/node": "^22.13.1",
+    "@vitest/browser": "^3.0.5",
+    "@vitest/eslint-plugin": "^1.1.26",
     "@vue/reactivity": "^3.5.13",
-    "bumpp": "^9.8.1",
-    "eslint": "^9.15.0",
+    "bumpp": "^9.11.1",
+    "eslint": "^9.19.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsdoc": "^50.6.0",
-    "eslint-plugin-jsonc": "^2.18.2",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-jsonc": "^2.19.1",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-toml": "^0.12.0",
     "eslint-plugin-unicorn": "^55.0.0",
-    "eslint-plugin-yml": "^1.15.0",
+    "eslint-plugin-yml": "^1.16.0",
     "gh-changelogen": "^0.2.8",
-    "jiti": "^2.4.0",
-    "lint-staged": "^15.2.10",
-    "npm-run-all2": "^6.2.6",
-    "playwright-core": "1.50.1",
-    "prettier": "^3.4.1",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0",
-    "unbuild": "3.3.1",
-    "vitest": "2.1.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite": "5.4.14"
-    }
+    "lint-staged": "^15.4.3",
+    "playwright-core": "1.46.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.23.0",
+    "unbuild": "^3.3.1",
+    "vitest": "^3.0.5"
   },
   "prettier": "@kazupon/prettier-config",
   "lint-staged": {
     "*.ts?(x)": [
       "prettier --parser=typescript --write",
-      "eslint --flag unstable_ts_config --fix"
+      "eslint --fix"
     ],
     "*.{js,mjs,cjs}": [
       "prettier --write",
-      "eslint --flag unstable_ts_config --fix"
+      "eslint --fix"
     ],
     "*.{json,jsonc,json5,md,yml,yaml}": [
       "prettier --write"
