@@ -25,11 +25,7 @@
   "publishConfig": {
     "access": "public"
   },
-<<<<<<< HEAD
-  "packageManager": "pnpm@9.15.4",
-=======
   "packageManager": "pnpm@10.2.1",
->>>>>>> b06a0a3 (chore: update deps)
   "engines": {
     "node": ">= 18.18"
   },
