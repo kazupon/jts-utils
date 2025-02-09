@@ -4,6 +4,6 @@
   "type": "module",
   "module": "index.mjs",
   "dependencies": {
-    "@kazupon/jts-utils": "^0.3.0"
+    "@kazupon/jts-utils": "^0.4.0"
   }
 }
