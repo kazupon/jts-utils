@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Modifier: kazuya kawaguchi (a.k.a. kazupon)
+
 import type { Awaitable, InteropModuleDefault } from '../types/index.ts'
 
 /**
