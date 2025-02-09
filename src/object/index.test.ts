@@ -1,5 +1,13 @@
-import { expect, test } from 'vitest'
-import { create, isObject, isPlainObject, toRawType, toTypeString } from './index.ts'
+import { describe, expect, test } from 'vitest'
+import {
+  create,
+  getOwn,
+  hasOwn,
+  isObject,
+  isPlainObject,
+  toRawType,
+  toTypeString
+} from './index.ts'
 
 class Foo {
   a = 1
@@ -72,14 +80,14 @@ test('toRawType', () => {
 test('create', () => {
   // default
   const o1 = create()
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
   // @ts-ignore -- for test
   expect(o1.prototype).toBe(undefined)
   expect(o1).toEqual({})
 
   // specify null
   const o2 = create(null) // eslint-disable-line unicorn/no-null
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
   // @ts-ignore -- for test
   expect(o2.prototype).toBe(undefined)
   expect(o2).toEqual({})
@@ -93,4 +101,72 @@ test('create', () => {
   expect(o3).toEqual({})
   expect(Object.hasOwn(o3, 'a')).toBe(false)
   expect(Object.hasOwn(o3, 'b')).toBe(false)
+})
+
+describe('hasOwn', () => {
+  test('string', () => {
+    const o = { a: 1 }
+    expect(hasOwn(o, 'a')).toBe(true)
+    expect(hasOwn(o, 'b')).toBe(false)
+
+    const c = new Foo()
+    expect(hasOwn(c, 'a')).toBe(true)
+    expect(hasOwn(c, 'b')).toBe(false)
+
+    const Bar = class Bar extends Foo {
+      b = '2'
+    }
+    const b = new Bar()
+    expect(hasOwn(b, 'a')).toBe(true)
+    expect(hasOwn(b, 'b')).toBe(true)
+  })
+
+  test('array', () => {
+    // array
+    const a = [1, 2]
+    expect(hasOwn(a, '0')).toBe(true)
+    expect(hasOwn(a, '1')).toBe(true)
+    expect(hasOwn(a, '2')).toBe(false)
+    expect(hasOwn(a, 0)).toBe(true)
+  })
+
+  test('symbol', () => {
+    // symbol
+    const symbolA = Symbol('a')
+    const symbolB = Symbol('b')
+
+    const s = { [symbolA]: 1 }
+    expect(hasOwn(s, symbolA)).toBe(true)
+    expect(hasOwn(s, symbolB)).toBe(false)
+  })
+})
+
+describe('getOwn', () => {
+  test('string', () => {
+    const o = { a: 1 }
+    expect(getOwn(o, 'a')).toBe(1)
+    // @ts-ignore -- Ignore error for test
+    expect(getOwn(o, 'b')).toBe(undefined)
+  })
+
+  test('array', () => {
+    // array
+    const a = [1, 2]
+    expect(getOwn(a, 0)).toBe(1)
+    expect(getOwn(a, 1)).toBe(2)
+    expect(getOwn(a, 2)).toBe(undefined)
+    // @ts-ignore -- Ignore error for test
+    expect(getOwn(a, '0')).toBe(1)
+  })
+
+  test('symbol', () => {
+    // symbol
+    const symbolA = Symbol('a')
+    const symbolB = Symbol('b')
+
+    const s = { [symbolA]: 1 }
+    expect(getOwn(s, symbolA)).toBe(1)
+    // @ts-ignore -- Ignore error for test
+    expect(getOwn(s, symbolB)).toBe(undefined)
+  })
 })
