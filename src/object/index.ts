@@ -55,3 +55,27 @@ export const create = <
 >(
   object: T | null = null // eslint-disable-line unicorn/no-null
 ): R => Object.create(object) as R
+
+const hasOwnProperty = Object.prototype.hasOwnProperty // eslint-disable-line @typescript-eslint/unbound-method
+
+/**
+ * Check if an object has a property
+ * @description this utility is sugar function of `Object.prototype.hasOwnProperty` function, array is also supported.
+ * @param target a target object
+ * @param key property key of the object
+ * @returns whether the object has the property
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function hasOwn(target: object | Array<any>, key: string | number | symbol): boolean {
+  return hasOwnProperty.call(target, key)
+}
+
+/**
+ * Get own property value of an object
+ * @param target a target object
+ * @param key property key of the object
+ * @returns the property value, if the object has the property, otherwise undefined
+ */
+export function getOwn<T extends object, K extends keyof T>(target: T, key: K): T[K] | undefined {
+  return hasOwn(target, key) ? target[key] : undefined
+}

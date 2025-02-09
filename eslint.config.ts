@@ -43,6 +43,7 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
   },
   {
     rules: {
+      '@typescript-eslint/ban-ts-comment': 'off',
       'unicorn/expiring-todo-comments': 'off'
     }
   }
