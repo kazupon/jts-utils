@@ -10,8 +10,6 @@ Opinionated collection of JavaScript / TypeScript utilities by @kazupon
 
 ✅️ &nbsp;**Modern:** ES Modules first and respect Web Standard
 
-✅️ &nbsp;**Compatible:** Support CommonJS and various JS environments
-
 ✅️️ &nbsp;**Minimal:** Small and fully tree-shakable
 
 ✅️️ &nbsp;**Type Strong:** Written in TypeScript, with full JSdoc
@@ -36,7 +34,7 @@ yarn add @kazupon/jts-utils
 ### 🦕 Deno
 
 ```sh
-deno add @kazupon/jts-utils
+deno add jsr:@kazupon/jts-utils
 ```
 
 ### 🥟 Bun

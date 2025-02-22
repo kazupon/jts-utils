@@ -108,7 +108,7 @@
   "include": [
     "src/**/*.ts",
     "eslint.config.ts",
-    "build.config.ts",
+    "tsdown.config.ts",
     "vitest.browser.config.ts",
     "knip.config.ts"
   ]

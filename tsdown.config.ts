@@ -1,7 +1,7 @@
-import { defineBuildConfig } from 'unbuild'
+import { defineConfig } from 'tsdown'
 
-const config: ReturnType<typeof defineBuildConfig> = defineBuildConfig({
-  entries: [
+const config: ReturnType<typeof defineConfig> = defineConfig({
+  entry: [
     'src/index.ts',
     'src/array/index.ts',
     'src/string/index.ts',
@@ -11,10 +11,9 @@ const config: ReturnType<typeof defineBuildConfig> = defineBuildConfig({
     'src/types/index.ts',
     'src/types/vue.ts'
   ],
-  declaration: true,
-  rollup: {
-    emitCJS: true
-  }
+  format: 'esm',
+  clean: true,
+  dts: true
 })
 
 export default config
