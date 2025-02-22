@@ -51,7 +51,7 @@ export function observe<State>(): Readonly<Observable<State>> {
 
     const unsubscribe = () => {
       const index = listeners.indexOf(listener)
-      if (index > -1) {
+      if (index !== -1) {
         listeners.splice(index, 1)
         _listenerCount = listeners.length
       }

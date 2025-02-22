@@ -130,21 +130,21 @@
     }
   },
   "devDependencies": {
-    "@kazupon/eslint-config": "^0.19.0",
+    "@kazupon/eslint-config": "^0.22.0",
     "@kazupon/prettier-config": "^0.1.1",
     "@types/node": "^22.13.5",
     "@vitest/browser": "^3.0.6",
     "@vitest/eslint-plugin": "^1.1.31",
     "@vue/reactivity": "^3.5.13",
-    "bumpp": "^9.11.1",
+    "bumpp": "^10.0.3",
     "eslint": "^9.21.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-jsdoc": "^50.6.3",
     "eslint-plugin-jsonc": "^2.19.1",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-toml": "^0.12.0",
-    "eslint-plugin-unicorn": "^55.0.0",
+    "eslint-plugin-unicorn": "^57.0.0",
     "eslint-plugin-yml": "^1.17.0",
     "gh-changelogen": "^0.2.8",
     "jsr": "^0.13.3",
@@ -158,6 +158,7 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "esbuild",
       "msw"
     ]
   },

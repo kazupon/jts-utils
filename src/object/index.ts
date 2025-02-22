@@ -22,7 +22,7 @@ export const isPlainObject = (value: unknown): value is Record<string, unknown> 
   value !== null &&
   typeof value === 'object' &&
   !Array.isArray(value) &&
-  !(value instanceof Function)
+  !(typeof value === 'function')
 
 const objectToString = Object.prototype.toString // eslint-disable-line @typescript-eslint/unbound-method
 
