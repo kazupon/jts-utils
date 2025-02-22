@@ -34,50 +34,49 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "browser": "./dist/index.mjs",
-      "default": "./dist/index.mjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "browser": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./array": {
       "types": "./dist/array/index.d.ts",
-      "import": "./dist/array/index.mjs",
-      "require": "./dist/array/index.cjs",
-      "browser": "./dist/array/index.mjs",
-      "default": "./dist/array/index.mjs"
+      "import": "./dist/array/index.js",
+      "require": "./dist/array/index.js",
+      "browser": "./dist/array/index.js",
+      "default": "./dist/array/index.js"
     },
     "./string": {
       "types": "./dist/string/index.d.ts",
-      "import": "./dist/string/index.mjs",
-      "require": "./dist/string/index.cjs",
-      "browser": "./dist/string/index.mjs",
-      "default": "./dist/string/index.mjs"
+      "import": "./dist/string/index.js",
+      "require": "./dist/string/index.js",
+      "browser": "./dist/string/index.js",
+      "default": "./dist/string/index.js"
     },
     "./observer": {
       "types": "./dist/observer/index.d.ts",
-      "import": "./dist/observer/index.mjs",
-      "require": "./dist/observer/index.cjs",
-      "browser": "./dist/observer/index.mjs",
-      "default": "./dist/observer/index.mjs"
+      "import": "./dist/observer/index.js",
+      "require": "./dist/observer/index.js",
+      "browser": "./dist/observer/index.js",
+      "default": "./dist/observer/index.js"
     },
     "./object": {
       "types": "./dist/object/index.d.ts",
-      "import": "./dist/object/index.mjs",
-      "require": "./dist/object/index.cjs",
-      "browser": "./dist/object/index.mjs",
-      "default": "./dist/object/index.mjs"
+      "import": "./dist/object/index.js",
+      "require": "./dist/object/index.js",
+      "browser": "./dist/object/index.js",
+      "default": "./dist/object/index.js"
     },
     "./module": {
       "types": "./dist/module/index.d.ts",
-      "import": "./dist/module/index.mjs",
-      "require": "./dist/module/index.cjs",
-      "browser": "./dist/module/index.mjs",
-      "default": "./dist/module/index.mjs"
+      "import": "./dist/module/index.js",
+      "require": "./dist/module/index.js",
+      "browser": "./dist/module/index.js",
+      "default": "./dist/module/index.js"
     },
     "./types": {
       "types": "./dist/types/index.d.ts"
@@ -97,7 +96,7 @@
     }
   },
   "scripts": {
-    "build": "unbuild",
+    "build": "tsdown",
     "changelog": "gh-changelogen --repo=kazupon/jts-utils",
     "fix": "pnpm run --parallel --color \"/fix:.*/\"",
     "fix:eslint": "eslint . --fix",
@@ -106,6 +105,7 @@
     "jsr": "pnpx pkg-to-jsr",
     "lint": "pnpm run --parallel --color \"/lint:.*/\"",
     "lint:eslint": "eslint .",
+    "lint:jsr": "jsr publish --dry-run --allow-dirty",
     "lint:knip": "knip",
     "lint:prettier": "prettier . --check",
     "prepack": "pnpm build",
@@ -117,6 +117,9 @@
     "test:deno": "DENO_FUTURE=1 deno run -A npm:vitest run",
     "test:unit": "vitest run --typecheck",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tsdown": "^0.6.0"
   },
   "peerDependencies": {
     "@vue/reactivity": "^3.4"
@@ -144,13 +147,13 @@
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-yml": "^1.17.0",
     "gh-changelogen": "^0.2.8",
+    "jsr": "^0.13.3",
     "knip": "^5.44.4",
     "lint-staged": "^15.4.3",
     "playwright-core": "1.46.1",
     "prettier": "^3.5.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1",
-    "unbuild": "^3.3.1",
     "vitest": "^3.0.6"
   },
   "pnpm": {

@@ -1,19 +1,16 @@
 {
-  "version": "3",
-  "packages": {
-    "specifiers": {
-      "jsr:@kazupon/jts-utils@^0.2.5": "jsr:@kazupon/jts-utils@0.2.5"
-    },
-    "jsr": {
-      "@kazupon/jts-utils@0.2.5": {
-        "integrity": "cf53ca00b5ab5d885ac6f556fa0e9f3aa270407819ae15ea7a1656478c3a99ad"
-      }
+  "version": "4",
+  "specifiers": {
+    "jsr:@kazupon/jts-utils@0.4": "0.4.0"
+  },
+  "jsr": {
+    "@kazupon/jts-utils@0.4.0": {
+      "integrity": "bcc6bd325997c909225b08ab2085b7e134f67ba08240e86ec8b5fba5832f46b7"
     }
   },
-  "remote": {},
   "workspace": {
     "dependencies": [
-      "jsr:@kazupon/jts-utils@^0.2.5"
+      "jsr:@kazupon/jts-utils@0.4"
     ]
   }
 }
