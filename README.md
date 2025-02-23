@@ -8,13 +8,10 @@ Opinionated collection of JavaScript / TypeScript utilities by @kazupon
 
 ## ✨ Features
 
-✅️ &nbsp;**Modern:** ES Modules first and respect Web Standard
-
-✅️️ &nbsp;**Minimal:** Small and fully tree-shakable
-
-✅️️ &nbsp;**Type Strong:** Written in TypeScript, with full JSdoc
-
-✅️️ &nbsp;**Universal Runtime:** Support Browser, Node.js, Deno, Bun and other!
+- ✅️ **Modern:** ES Modules and respect Web Standard
+- ✅️️ **Minimal:** Small and fully tree-shakable
+- ✅️️ **Type Strong:** Written in TypeScript, with full JSdoc
+- ✅️️ **Universal Runtime:** Support Browser, Node.js, Deno, Bun and other!
 
 ## 💿 Installation
 
