@@ -130,7 +130,7 @@
     }
   },
   "devDependencies": {
-    "@kazupon/eslint-config": "^0.22.0",
+    "@kazupon/eslint-config": "^0.23.0",
     "@kazupon/prettier-config": "^0.1.1",
     "@types/node": "^22.13.5",
     "@vitest/browser": "^3.0.6",
