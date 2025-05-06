@@ -119,7 +119,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "tsdown": "^0.9.0"
+    "tsdown": "^0.11.0"
   },
   "peerDependencies": {
     "@vue/reactivity": "^3.4"
