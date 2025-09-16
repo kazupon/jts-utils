@@ -23,7 +23,7 @@ jobs:
     name: Lint on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: |
@@ -54,7 +54,7 @@ jobs:
     name: Test on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: |
@@ -84,7 +84,7 @@ jobs:
     name: Test on Deno
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup deno
         uses: denoland/setup-deno@v1
@@ -116,7 +116,7 @@ jobs:
     name: Test on Bun
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup bun
         uses: oven-sh/setup-bun@v2
@@ -150,7 +150,7 @@ jobs:
     name: Build on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: |
@@ -179,7 +179,7 @@ jobs:
     name: Type Checking on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: |
