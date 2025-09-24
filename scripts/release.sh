@@ -15,8 +15,8 @@ fi
 
 # Release packages
 TAG="latest"
-echo "⚡ Publishing $PKG with tag $TAG for npm registory"
+echo "⚡ Publishing $PKG with tag $TAG for npm registry"
 pnpm publish --access public --no-git-checks --tag $TAG
 
-echo "⚡ Publishing $PKG for jsr registory"
+echo "⚡ Publishing $PKG for jsr registry"
 pnpx jsr publish -c jsr.json
