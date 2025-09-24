@@ -3,7 +3,7 @@
 
 /**
  * pascalize string
- * @param value a string value
+ * @param value - a string value
  * @returns pascalized string
  */
 export function pascalize(value: string): string {

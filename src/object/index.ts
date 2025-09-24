@@ -5,7 +5,7 @@ import { Merge } from '../types/index.ts'
 
 /**
  * Check if a value is an object
- * @param value a value to check
+ * @param value - a value to check
  * @returns whether the value is an object
  */
 export const isObject = (value: unknown): value is object =>
@@ -14,7 +14,7 @@ export const isObject = (value: unknown): value is object =>
 
 /**
  * Check if a value is a plain object
- * @param value a value to check
+ * @param value - a value to check
  * @returns  whether the value is a plain object
  */
 export const isPlainObject = (value: unknown): value is Record<string, unknown> =>
@@ -28,14 +28,14 @@ const objectToString = Object.prototype.toString // eslint-disable-line @typescr
 
 /**
  * Get the type string of a value
- * @param value target value
+ * @param value - target value
  * @returns type string with `[object ${type}]`
  */
 export const toTypeString = (value: unknown): string => objectToString.call(value)
 
 /**
  * Get the raw type of a value
- * @param value target value
+ * @param value - target value
  * @returns extract "RawType" from strings like "[object RawType]"
  */
 export const toRawType = (value: unknown): string =>
@@ -45,10 +45,15 @@ export const toRawType = (value: unknown): string =>
 /**
  * create a new object
  * @description this utility is sugar function of `Object.create` function, accept same arguments, which is prototype object.
- * @param object an object, default is null
+ * @param object - an object, default is null
  * @returns a new object
  */
 
+/**
+ * Create a new object
+ * @param object - prototype object, default is null
+ * @returns a new object
+ */
 export const create = <
   T extends object | null = null,
   R = T extends null ? object : Merge<T, typeof Object.prototype>
@@ -61,8 +66,8 @@ const hasOwnProperty = Object.prototype.hasOwnProperty // eslint-disable-line @t
 /**
  * Check if an object has a property
  * @description this utility is sugar function of `Object.prototype.hasOwnProperty` function, array is also supported.
- * @param target a target object
- * @param key property key of the object
+ * @param target - a target object
+ * @param key - property key of the object
  * @returns whether the object has the property
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -72,8 +77,8 @@ export function hasOwn(target: object | Array<any>, key: string | number | symbo
 
 /**
  * Get own property value of an object
- * @param target a target object
- * @param key property key of the object
+ * @param target - a target object
+ * @param key - property key of the object
  * @returns the property value, if the object has the property, otherwise undefined
  */
 export function getOwn<T extends object, K extends keyof T>(target: T, key: K): T[K] | undefined {
