@@ -21,13 +21,13 @@ export interface Observable<State> {
   readonly listenerCount: number
   /**
    * add state subscription
-   * @param listener listener
+   * @param listener - listener
    * @returns unsubscribe handler
    */
   subscribe(listener: ObservableStateSubscribeHandler<State>): ObservableStateUnsubscribeHandler
   /**
    * notify state value
-   * @param state updated state value
+   * @param state - updated state value
    */
   notify(state: State): void
   /**
@@ -44,7 +44,10 @@ export function observe<State>(): Readonly<Observable<State>> {
   const listeners: ObservableStateSubscribeHandler<State>[] = []
   let _listenerCount = 0
 
-  // eslint-disable-next-line jsdoc/require-jsdoc
+  /**
+   *
+   * @param listener
+   */
   function subscribe(listener: ObservableStateSubscribeHandler<State>) {
     listeners.push(listener)
     _listenerCount = listeners.length
@@ -59,7 +62,10 @@ export function observe<State>(): Readonly<Observable<State>> {
     return unsubscribe
   }
 
-  // eslint-disable-next-line jsdoc/require-jsdoc
+  /**
+   *
+   * @param state
+   */
   function notify(state: State) {
     for (const listener of listeners) listener(state)
   }
