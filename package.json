@@ -157,9 +157,13 @@
     "vitest": "^3.2.4"
   },
   "pnpm": {
+    "overrides": {
+      "rolldown": "1.0.0-beta.39"
+    },
     "onlyBuiltDependencies": [
       "esbuild",
-      "msw"
+      "msw",
+      "oxc-resolver"
     ]
   },
   "prettier": "@kazupon/prettier-config",
