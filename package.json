@@ -158,7 +158,7 @@
   },
   "pnpm": {
     "overrides": {
-      "rolldown": "1.0.0-beta.43"
+      "rolldown": "1.0.0-beta.44"
     },
     "onlyBuiltDependencies": [
       "esbuild",
