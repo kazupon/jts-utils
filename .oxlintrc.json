@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "import", "promise", "unicorn", "node"],
+  "overrides": [
+    {
+      "files": ["**/*.{test,spec}.{ts,tsx}"],
+      "plugins": ["vitest"]
+    }
+  ],
+  "ignorePatterns": [
+    "**/node_modules",
+    "**/dist",
+    ".vscode/**/*.json",
+    "./playground",
+    "**/tsconfig*.json",
+    "CHANGELOG.md",
+    ".github/FUNDING.yml",
+    ".notes",
+    ".slides",
+    ".claude",
+    ".vscode"
+  ]
+}

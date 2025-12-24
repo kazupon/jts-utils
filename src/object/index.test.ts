@@ -18,9 +18,7 @@ test('isObject', () => {
   expect(isObject(new Foo())).toBe(true)
   expect(isObject([])).toBe(true) // NOTE: array is object
 
-  // eslint-disable-next-line unicorn/no-null
   expect(isObject(null)).toBe(false)
-  // eslint-disable-next-line unicorn/no-useless-undefined
   expect(isObject(undefined)).toBe(false)
   expect(isObject(1)).toBe(false)
   expect(isObject(true)).toBe(false)
@@ -34,9 +32,7 @@ test('isPlainObject', () => {
   expect(isPlainObject(new Foo())).toBe(true)
 
   expect(isPlainObject([])).toBe(false) // NOTE: array is not object
-  // eslint-disable-next-line unicorn/no-null
   expect(isPlainObject(null)).toBe(false)
-  // eslint-disable-next-line unicorn/no-useless-undefined
   expect(isPlainObject(undefined)).toBe(false)
   expect(isPlainObject(1)).toBe(false)
   expect(isPlainObject(true)).toBe(false)
@@ -49,9 +45,7 @@ test('toTypeString', () => {
   expect(toTypeString({})).toBe('[object Object]')
   expect(toTypeString([])).toBe('[object Array]')
   expect(toTypeString(new Foo())).toBe('[object Object]')
-  // eslint-disable-next-line unicorn/no-null
   expect(toTypeString(null)).toBe('[object Null]')
-  // eslint-disable-next-line unicorn/no-useless-undefined
   expect(toTypeString(undefined)).toBe('[object Undefined]')
   expect(toTypeString(1)).toBe('[object Number]')
   expect(toTypeString(BigInt(1))).toBe('[object BigInt]')
@@ -86,7 +80,7 @@ test('create', () => {
   expect(o1).toEqual({})
 
   // specify null
-  const o2 = create(null) // eslint-disable-line unicorn/no-null
+  const o2 = create(null)
 
   // @ts-ignore -- for test
   expect(o2.prototype).toBe(undefined)

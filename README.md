@@ -44,6 +44,8 @@ bun add @kazupon/jts-utils
 
 in your HTML:
 
+<!-- eslint-skip -->
+
 ```html
 <script type="module">
   /**
@@ -73,11 +75,3 @@ If you are interested in contributing to `@kazupon/jts-utils`, I highly recommen
 [jsr-href]: https://jsr.io/@kazupon/jts-utils
 [ci-src]: https://github.com/kazupon/jts-utils/actions/workflows/ci.yml/badge.svg
 [ci-href]: https://github.com/kazupon/jts-utils/actions/workflows/ci.yml
-
-<!-- TODO: -->
-
-[npm-downloads-src]: https://img.shields.io/npm/dm/@kazupon/jts-utils?style=flat
-
-<!-- TODO: -->
-
-[npm-downloads-href]: https://npmjs.com/package/@kazupon/jts-utils

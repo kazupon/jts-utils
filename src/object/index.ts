@@ -58,7 +58,7 @@ export const create = <
   T extends object | null = null,
   R = T extends null ? object : Merge<T, typeof Object.prototype>
 >(
-  object: T | null = null // eslint-disable-line unicorn/no-null
+  object: T | null = null
 ): R => Object.create(object) as R
 
 const hasOwnProperty = Object.prototype.hasOwnProperty // eslint-disable-line @typescript-eslint/unbound-method

@@ -1,0 +1,9 @@
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+  - '@vitest/eslint-plugin'
+  - knip
+
+onlyBuiltDependencies:
+  - deno
+  - esbuild

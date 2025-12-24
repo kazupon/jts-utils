@@ -1,29 +1,38 @@
 import {
-  comments,
   defineConfig,
-  javascript,
-  jsdoc,
+  // jsdoc,
   jsonc,
-  prettier,
-  promise,
+  markdown,
+  // comments,
+  oxlint,
   regexp,
   toml,
   typescript,
-  unicorn,
-  vitest,
   yml
 } from '@kazupon/eslint-config'
 
 const config: ReturnType<typeof defineConfig> = defineConfig(
-  javascript(),
-  comments(),
-  promise(),
+  // TODO(kazupon): enable after fixing jsdoc issues
+  // comments({
+  //   kazupon: {
+  //     ignores: [
+  //       './**/test/**',
+  //       './**/src/**/*.test.ts',
+  //       './**/src/**/*.test-d.ts',
+  //     ]
+  //   }
+  // }),
   regexp(),
-  unicorn(),
-  typescript(),
-  jsdoc({
-    typescript: 'syntax'
+  typescript({
+    parserOptions: {
+      tsconfigRootDir: import.meta.dirname,
+      project: true
+    }
   }),
+  // TODO(kazupon): enable after fixing jsdoc issues
+  // jsdoc({
+  //   typescript: 'syntax'
+  // }),
   jsonc({
     json: true,
     json5: true,
@@ -34,19 +43,14 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
     prettier: true
   }),
   toml(),
-  vitest({
-    typeTesting: true
+  markdown({
+    preferences: true
   }),
-  prettier(),
-  {
-    ignores: ['**/tsconfig.json', '**/dist/**', 'playground/**/*.ts']
-  },
-  {
-    rules: {
-      '@typescript-eslint/ban-ts-comment': 'off',
-      'unicorn/expiring-todo-comments': 'off'
-    }
-  }
+  oxlint({
+    // TODO(kazupon): enable after fixing typescript-eslint issues
+    // presets: ['typescript'],
+    configFile: './.oxlintrc.json'
+  })
 )
 
 export default config

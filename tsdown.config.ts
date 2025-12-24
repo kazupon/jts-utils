@@ -13,9 +13,14 @@ const config: UserConfig = defineConfig({
     'src/types/index.ts',
     'src/types/vue.ts'
   ],
-  format: 'esm',
+  publint: true,
   clean: true,
-  dts: true
+  dts: true,
+  fixedExtension: false
+  // TODO(kawaguchi): Enable when the issue is resolved.
+  // hooks: {
+  //   'build:done': lintJsrExports()
+  // }
 })
 
 export default config

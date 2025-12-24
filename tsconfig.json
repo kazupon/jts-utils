@@ -105,11 +105,12 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": [
-    "src/**/*.ts",
-    "eslint.config.ts",
-    "tsdown.config.ts",
-    "vitest.browser.config.ts",
-    "knip.config.ts"
-  ]
+  "include": ["src", "tsdown.config.ts", "eslint.config.ts", "knip.config.ts"]
+  // "include": [
+  //   "src/**/*.ts",
+  //   "eslint.config.ts",
+  //   "tsdown.config.ts",
+  //   "vitest.browser.config.ts",
+  //   "knip.config.ts"
+  // ]
 }
