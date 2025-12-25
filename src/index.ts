@@ -1,5 +1,18 @@
-// SPDX-License-Identifier: MIT
-// Modifier: kazuya kawaguchi (a.k.a. kazupon)
+/**
+ * jts-utils main entry point
+ *
+ * This entry point re-exports **all** utility modules provided by the jts-utils library.
+ *
+ * @example
+ * ```ts
+ * import { toArray } from '@kazupon/jts-utils'
+ * ```
+ *
+ * @module default
+ *
+ * @license MIT
+ * @author kazuya kawaguchi (a.k.a. kazupon)
+ */
 
 export * from './array/index.ts'
 export * from './module/index.ts'

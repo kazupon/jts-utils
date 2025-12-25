@@ -1,5 +1,16 @@
-// SPDX-License-Identifier: MIT
-// Modifier: kazuya kawaguchi (a.k.a. kazupon)
+/**
+ * Vue type utilities
+ *
+ * @example
+ * ```ts
+ * import type { MaybeRef, MaybeRefOrGetter } from '@kazupon/jts-utils/vue'
+ * ```
+ *
+ * @module vue
+ *
+ * @license MIT
+ * @author kazuya kawaguchi (a.k.a. kazupon)
+ */
 
 import type { Ref } from '@vue/reactivity'
 

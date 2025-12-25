@@ -1,5 +1,16 @@
-// SPDX-License-Identifier: MIT
-// Modifier: kazuya kawaguchi (a.k.a. kazupon)
+/**
+ * String utilities
+ *
+ * @example
+ * ```ts
+ * import { pascalize } from '@kazupon/jts-utils/string'
+ * ```
+ *
+ * @module string
+ *
+ * @license MIT
+ * @author kazuya kawaguchi (a.k.a. kazupon)
+ */
 
 /**
  * pascalize string

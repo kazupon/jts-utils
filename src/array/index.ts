@@ -1,5 +1,16 @@
-// SPDX-License-Identifier: MIT
-// Modifier: kazuya kawaguchi (a.k.a. kazupon)
+/**
+ * Array utilities
+ *
+ * @example
+ * ```ts
+ * import { toArray } from '@kazupon/jts-utils/array'
+ * ```
+ *
+ * @module array
+ *
+ * @license MIT
+ * @author kazuya kawaguchi (a.k.a. kazupon)
+ */
 
 /**
  * convert to array

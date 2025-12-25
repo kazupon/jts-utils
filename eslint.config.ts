@@ -3,7 +3,7 @@ import {
   jsdoc,
   jsonc,
   markdown,
-  // comments,
+  comments,
   oxlint,
   regexp,
   toml,
@@ -12,16 +12,11 @@ import {
 } from '@kazupon/eslint-config'
 
 const config: ReturnType<typeof defineConfig> = defineConfig(
-  // TODO(kazupon): enable after fixing jsdoc issues
-  // comments({
-  //   kazupon: {
-  //     ignores: [
-  //       './**/test/**',
-  //       './**/src/**/*.test.ts',
-  //       './**/src/**/*.test-d.ts',
-  //     ]
-  //   }
-  // }),
+  comments({
+    kazupon: {
+      ignores: ['./**/test/**', './**/src/**/*.test.ts', './**/src/**/*.test-d.ts']
+    }
+  }),
   regexp(),
   typescript({
     parserOptions: {

@@ -1,5 +1,16 @@
-// SPDX-License-Identifier: MIT
-// Modifier: kazuya kawaguchi (a.k.a. kazupon)
+/**
+ * Observer utilities
+ *
+ * @example
+ * ```ts
+ * import { observe } from '@kazupon/jts-utils/observer'
+ * ```
+ *
+ * @module Observer
+ *
+ * @license MIT
+ * @author kazuya kawaguchi (a.k.a. kazupon)
+ */
 
 /**
  * State value subscribe handler

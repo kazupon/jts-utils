@@ -1,5 +1,16 @@
-// SPDX-License-Identifier: MIT
-// Modifier: kazuya kawaguchi (a.k.a. kazupon)
+/**
+ * Object utilities
+ *
+ * @example
+ * ```ts
+ * import { isObject, isPlainObject } from '@kazupon/jts-utils/object'
+ * ```
+ *
+ * @module object
+ *
+ * @license MIT
+ * @author kazuya kawaguchi (a.k.a. kazupon)
+ */
 
 import { Merge } from '../types/index.ts'
 
@@ -26,7 +37,7 @@ export const isPlainObject = (value: unknown): value is Record<string, unknown> 
   !Array.isArray(value) &&
   !(typeof value === 'function')
 
-const objectToString = Object.prototype.toString // eslint-disable-line @typescript-eslint/unbound-method
+const objectToString = Object.prototype.toString // eslint-disable-line @typescript-eslint/unbound-method -- inline
 
 /**
  * Get the type string of a value
@@ -67,7 +78,7 @@ export const create = <
   object: T | null = null
 ): R => Object.create(object) as R
 
-const hasOwnProperty = Object.prototype.hasOwnProperty // eslint-disable-line @typescript-eslint/unbound-method
+const hasOwnProperty = Object.prototype.hasOwnProperty // eslint-disable-line @typescript-eslint/unbound-method -- inline
 
 /**
  * Check if an object has a property
