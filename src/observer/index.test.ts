@@ -77,6 +77,34 @@ test('multiple subscribers', () => {
   expect(listener2).toHaveBeenCalledTimes(2)
 })
 
+test('unsubscribe with using syntax', () => {
+  const observer = observe<State>()
+
+  const listener = vi.fn()
+
+  {
+    using _unsubscribe = observer.subscribe(listener)
+    observer.notify({ a: 1 })
+    expect(listener).toHaveBeenCalledTimes(1)
+  }
+
+  observer.notify({ a: 2 })
+  expect(listener).toHaveBeenCalledTimes(1)
+})
+
+test('unregister subscribers with using syntax', () => {
+  let o: ReturnType<typeof observe<State>> | undefined
+  {
+    using observer = observe<State>()
+    o = observer
+    const listener1 = vi.fn()
+    const listener2 = vi.fn()
+    observer.subscribe(listener1)
+    observer.subscribe(listener2)
+  }
+  expect(o?.listenerCount).toBe(0)
+})
+
 test('dispose', () => {
   const observer = observe<State>()
 
