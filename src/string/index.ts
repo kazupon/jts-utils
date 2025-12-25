@@ -3,6 +3,7 @@
 
 /**
  * pascalize string
+ *
  * @param value - a string value
  * @returns pascalized string
  */

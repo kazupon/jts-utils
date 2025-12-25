@@ -3,6 +3,7 @@
 
 /**
  * convert to array
+ *
  * @param value - a value
  * @returns convrted array
  */

@@ -1,6 +1,6 @@
 import {
   defineConfig,
-  // jsdoc,
+  jsdoc,
   jsonc,
   markdown,
   // comments,
@@ -29,10 +29,9 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
       project: true
     }
   }),
-  // TODO(kazupon): enable after fixing jsdoc issues
-  // jsdoc({
-  //   typescript: 'syntax'
-  // }),
+  jsdoc({
+    typescript: 'syntax'
+  }),
   jsonc({
     json: true,
     json5: true,

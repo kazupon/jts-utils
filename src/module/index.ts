@@ -5,6 +5,7 @@ import type { Awaitable, InteropModuleDefault } from '../types/index.ts'
 
 /**
  * resolve module with interop default
+ *
  * @param mod - a module
  * @returns resolved module
  */

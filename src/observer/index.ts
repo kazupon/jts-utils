@@ -21,12 +21,14 @@ export interface Observable<State> {
   readonly listenerCount: number
   /**
    * add state subscription
+   *
    * @param listener - listener
    * @returns unsubscribe handler
    */
   subscribe(listener: ObservableStateSubscribeHandler<State>): ObservableStateUnsubscribeHandler
   /**
    * notify state value
+   *
    * @param state - updated state value
    */
   notify(state: State): void
@@ -38,6 +40,7 @@ export interface Observable<State> {
 
 /**
  * observe state value
+ *
  * @returns observable state value
  */
 export function observe<State>(): Readonly<Observable<State>> {
@@ -45,8 +48,10 @@ export function observe<State>(): Readonly<Observable<State>> {
   let _listenerCount = 0
 
   /**
+   * subscribe state change
    *
-   * @param listener
+   * @param listener - listener handler
+   * @returns unsubscribe handler
    */
   function subscribe(listener: ObservableStateSubscribeHandler<State>) {
     listeners.push(listener)
@@ -63,8 +68,9 @@ export function observe<State>(): Readonly<Observable<State>> {
   }
 
   /**
+   * notify state change
    *
-   * @param state
+   * @param state - state value
    */
   function notify(state: State) {
     for (const listener of listeners) listener(state)
