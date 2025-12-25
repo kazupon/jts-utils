@@ -16,6 +16,7 @@
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */
 
+export * from './result/index.ts'
 export * from './array/index.ts'
 export * from './module/index.ts'
 export * from './observer/index.ts'
