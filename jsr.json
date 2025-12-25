@@ -11,6 +11,8 @@
     "./array": "./src/array/index.ts",
     "./string": "./src/string/index.ts",
     "./observer": "./src/observer/index.ts",
-    "./module": "./src/module/index.ts"
+    "./module": "./src/module/index.ts",
+    "./types": "./src/types/index.ts",
+    "./types/vue": "./src/types/vue.ts"
   }
 }

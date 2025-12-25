@@ -53,17 +53,13 @@ export type IsNull<T> = T extends null ? true : false
 /**
  * whether the type is object
  */
-export type IsObject<T> = T extends object
-  ? T extends Function // eslint-disable-line @typescript-eslint/no-unsafe-function-type
-    ? false
-    : true
-  : false
+export type IsObject<T> = T extends object ? (T extends Function ? false : true) : false
 
 /**
  * whether the type is a plain object
  */
 export type IsPlainObject<T> = T extends object
-  ? T extends Function | Array<any> | null // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-function-type
+  ? T extends Function | Array<any> | null
     ? false
     : true
   : false

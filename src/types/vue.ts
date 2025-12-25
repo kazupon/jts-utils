@@ -6,9 +6,9 @@ import type { Ref } from '@vue/reactivity'
 /**
  * Define T or {@link Ref<T>} type
  */
-export type MaybeRef<T = any> = T | Ref<T> // eslint-disable-line @typescript-eslint/no-explicit-any
+export type MaybeRef<T = any> = T | Ref<T>
 
 /**
  * Define T or {@link Ref<T>} or getter function type
  */
-export type MaybeRefOrGetter<T = any> = MaybeRef<T> | (() => T) // eslint-disable-line @typescript-eslint/no-explicit-any
+export type MaybeRefOrGetter<T = any> = MaybeRef<T> | (() => T)

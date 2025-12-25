@@ -47,8 +47,7 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
     preferences: true
   }),
   oxlint({
-    // TODO(kazupon): enable after fixing typescript-eslint issues
-    // presets: ['typescript'],
+    presets: ['typescript'],
     configFile: './.oxlintrc.json'
   })
 )

@@ -55,13 +55,11 @@ test('IsNull', () => {
 
 test('IsObject', () => {
   expectTypeOf<IsObject<object>>().toEqualTypeOf<true>()
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   expectTypeOf<IsObject<{}>>().toEqualTypeOf<true>()
   expectTypeOf<IsObject<{ a: number }>>().toEqualTypeOf<true>()
   expectTypeOf<IsObject<Foo>>().toEqualTypeOf<true>()
   expectTypeOf<IsObject<string[]>>().toEqualTypeOf<true>() // NOTE: Array is object
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   expectTypeOf<IsObject<Function>>().toEqualTypeOf<false>()
   expectTypeOf<IsObject<number>>().toEqualTypeOf<false>()
   expectTypeOf<IsObject<string>>().toEqualTypeOf<false>()
@@ -72,13 +70,11 @@ test('IsObject', () => {
 
 test('IsPlainObject', () => {
   expectTypeOf<IsPlainObject<object>>().toEqualTypeOf<true>()
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   expectTypeOf<IsPlainObject<{}>>().toEqualTypeOf<true>()
   expectTypeOf<IsPlainObject<{ a: number }>>().toEqualTypeOf<true>()
   expectTypeOf<IsPlainObject<Foo>>().toEqualTypeOf<true>()
 
   expectTypeOf<IsPlainObject<string[]>>().toEqualTypeOf<false>() // NOTE: Array is not object
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   expectTypeOf<IsPlainObject<Function>>().toEqualTypeOf<false>()
   expectTypeOf<IsPlainObject<string>>().toEqualTypeOf<false>()
   expectTypeOf<IsPlainObject<null>>().toEqualTypeOf<false>()

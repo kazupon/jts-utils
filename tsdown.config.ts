@@ -1,3 +1,4 @@
+// import { lintJsrExports } from 'jsr-exports-lint/tsdown'
 import { defineConfig } from 'tsdown'
 
 import type { UserConfig } from 'tsdown'
@@ -17,7 +18,7 @@ const config: UserConfig = defineConfig({
   clean: true,
   dts: true,
   fixedExtension: false
-  // TODO(kawaguchi): Enable when the issue is resolved.
+  // TODO(kazupon): enable after fixing jsr-exports-lint issues
   // hooks: {
   //   'build:done': lintJsrExports()
   // }

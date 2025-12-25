@@ -10,6 +10,6 @@ import type { Awaitable, InteropModuleDefault } from '../types/index.ts'
  */
 export async function interopDefault<T>(mod: Awaitable<T>): Promise<InteropModuleDefault<T>> {
   const resolved = await mod
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   return ((resolved as any).default || resolved) as Promise<InteropModuleDefault<T>>
 }

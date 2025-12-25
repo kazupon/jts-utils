@@ -70,7 +70,6 @@ const hasOwnProperty = Object.prototype.hasOwnProperty // eslint-disable-line @t
  * @param key - property key of the object
  * @returns whether the object has the property
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function hasOwn(target: object | Array<any>, key: string | number | symbol): boolean {
   return hasOwnProperty.call(target, key)
 }
