@@ -6,8 +6,10 @@
  * import { isObject, isPlainObject } from '@kazupon/jts-utils/object'
  * ```
  *
- * @module object
- *
+ * @module Object
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */
