@@ -7,7 +7,9 @@
  * ```
  *
  * @module Observer
- *
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */

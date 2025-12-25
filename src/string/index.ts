@@ -6,8 +6,10 @@
  * import { pascalize } from '@kazupon/jts-utils/string'
  * ```
  *
- * @module string
- *
+ * @module String
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */

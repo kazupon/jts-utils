@@ -6,8 +6,10 @@
  * import type { MaybeRef, MaybeRefOrGetter } from '@kazupon/jts-utils/vue'
  * ```
  *
- * @module vue
- *
+ * @module Vue
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */

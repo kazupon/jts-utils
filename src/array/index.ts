@@ -6,8 +6,10 @@
  * import { toArray } from '@kazupon/jts-utils/array'
  * ```
  *
- * @module array
- *
+ * @module Array
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */

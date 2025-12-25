@@ -6,8 +6,10 @@
  * import { interopDefault } from '@kazupon/jts-utils/module'
  * ```
  *
- * @module module
- *
+ * @module Module
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */

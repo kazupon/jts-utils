@@ -8,8 +8,10 @@
  * import { toArray } from '@kazupon/jts-utils'
  * ```
  *
- * @module default
- *
+ * @module Default
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */

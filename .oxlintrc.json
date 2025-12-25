@@ -13,6 +13,7 @@
     ".vscode/**/*.json",
     "./playground",
     "**/tsconfig*.json",
+    "./docs",
     "CHANGELOG.md",
     ".github/FUNDING.yml",
     ".notes",
