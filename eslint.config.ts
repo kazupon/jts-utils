@@ -12,11 +12,7 @@ import {
 } from '@kazupon/eslint-config'
 
 const config: ReturnType<typeof defineConfig> = defineConfig(
-  comments({
-    kazupon: {
-      ignores: ['./**/test/**', './**/src/**/*.test.ts', './**/src/**/*.test-d.ts']
-    }
-  }),
+  comments({ kazupon: false }),
   regexp(),
   typescript({
     parserOptions: {

@@ -3,6 +3,8 @@ minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
   - '@vitest/eslint-plugin'
   - knip
+  - '@kazupon/eslint-config'
+  - '@kazupon/eslint-plugin'
 
 onlyBuiltDependencies:
   - deno

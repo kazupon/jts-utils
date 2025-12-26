@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["typescript", "import", "promise", "unicorn", "node"],
+  "extends": ["./node_modules/@kazupon/eslint-plugin/oxlint/recommended.json"],
   "overrides": [
     {
       "files": ["**/*.{test,spec}.{ts,tsx}"],
