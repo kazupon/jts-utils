@@ -1,6 +1,8 @@
 import { expectTypeOf, test } from 'vitest'
 import type {
+  Prettify,
   Awaitable,
+  Overwrite,
   InteropModuleDefault,
   IsNever,
   IsNull,
@@ -80,4 +82,20 @@ test('IsPlainObject', () => {
   expectTypeOf<IsPlainObject<null>>().toEqualTypeOf<false>()
   expectTypeOf<IsPlainObject<undefined>>().toEqualTypeOf<false>()
   expectTypeOf<IsPlainObject<() => void>>().toEqualTypeOf<false>()
+})
+
+test('Overwrite', () => {
+  type Original = {
+    a: number
+    b: string
+  }
+  type Update = {
+    a: string
+    b: boolean
+  }
+  type Overwritten = Overwrite<Original, Update>
+  expectTypeOf<Prettify<Overwritten>>().toEqualTypeOf<{
+    a: string
+    b: boolean
+  }>()
 })

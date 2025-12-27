@@ -134,6 +134,7 @@
   "devDependencies": {
     "@eslint/markdown": "^7.5.1",
     "@kazupon/eslint-config": "^0.43.0",
+    "@kazupon/eslint-plugin": "^0.7.1",
     "@kazupon/prettier-config": "^0.2.0",
     "@types/node": "^25.0.3",
     "@typescript/native-preview": "7.0.0-dev.20251218.3",
@@ -180,7 +181,7 @@
       "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
       "eslint --fix"
     ],
-    "!(package|jsr).json": [
+    "!(package).json": [
       "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
       "eslint --fix"
     ],

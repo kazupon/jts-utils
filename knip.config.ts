@@ -7,6 +7,7 @@ const config: KnipConfig = {
     '@vue/reactivity',
     '@vitest/browser',
     '@kazupon/prettier-config',
+    '@kazupon/eslint-plugin',
     'deno',
     'jsr-exports-lint'
   ]
