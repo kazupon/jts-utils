@@ -94,7 +94,6 @@ test('Overwrite', () => {
     b: boolean
   }
   type Overwritten = Overwrite<Original, Update>
-  type T = Prettify<Overwritten>
   expectTypeOf<Prettify<Overwritten>>().toEqualTypeOf<{
     a: string
     b: boolean
