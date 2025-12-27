@@ -181,7 +181,7 @@
       "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
       "eslint --fix"
     ],
-    "!(package|jsr).json": [
+    "!(package).json": [
       "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
       "eslint --fix"
     ],
