@@ -18,6 +18,7 @@ import { toArray } from '@kazupon/jts-utils'
 
 | Function                                      | Description                                                     |
 | --------------------------------------------- | --------------------------------------------------------------- |
+| [createEmitter](functions/createEmitter.md)   | Create a event emitter                                          |
 | [err](functions/err.md)                       | Utility function to create an Err object for failure            |
 | [interopDefault](functions/interopDefault.md) | resolve module with interop default for CommonJS and ES Modules |
 | [isErr](functions/isErr.md)                   | Type guard function to check if a Result is Err                 |

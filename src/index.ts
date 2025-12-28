@@ -17,6 +17,7 @@
  */
 
 export * from './result/index.ts'
+export * from './event/index.ts'
 export * from './array/index.ts'
 export * from './module/index.ts'
 export * from './observer/index.ts'
