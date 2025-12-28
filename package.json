@@ -78,6 +78,13 @@
       "browser": "./dist/module/index.js",
       "default": "./dist/module/index.js"
     },
+    "./event": {
+      "types": "./dist/event/index.d.ts",
+      "import": "./dist/event/index.js",
+      "require": "./dist/event/index.js",
+      "browser": "./dist/event/index.js",
+      "default": "./dist/event/index.js"
+    },
     "./types": {
       "types": "./dist/types/index.d.ts"
     },

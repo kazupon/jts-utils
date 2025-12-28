@@ -9,6 +9,7 @@ const config: UserConfig = defineConfig({
     'src/array/index.ts',
     'src/string/index.ts',
     'src/object/index.ts',
+    'src/event/index.ts',
     'src/observer/index.ts',
     'src/module/index.ts',
     'src/types/index.ts',
