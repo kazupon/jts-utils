@@ -27,7 +27,7 @@ observable state value
 ## Examples
 
 ```ts
-import { observe } from '@kazupon/jts-utils/observer'
+import { observe } from '@kazupon/jts-utils'
 
 // create observable
 const observer = observe<{ a: number }>()
@@ -47,7 +47,7 @@ unsubscribe()
 if javascript runtime supports `Symbol.dispose`, you can use it as follows:
 
 ```ts
-import { observe } from '@kazupon/jts-utils/observer'
+import { observe } from '@kazupon/jts-utils'
 
 // create observable with `using` syntax
 // when the scope is exited, `observer.dispose` will be called automatically

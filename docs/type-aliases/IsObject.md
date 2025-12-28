@@ -14,6 +14,15 @@ whether the type is object
 
 ## Type Parameters
 
-| Type Parameter |
-| -------------- |
-| `T`            |
+| Type Parameter | Description   |
+| -------------- | ------------- |
+| `T`            | Type to check |
+
+## Example
+
+```ts
+import type { IsObject } from '@kazupon/jts-utils'
+
+type A = IsObject<{ a: number }> // true
+type B = IsObject<string> // false
+```

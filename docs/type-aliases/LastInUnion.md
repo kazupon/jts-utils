@@ -14,6 +14,19 @@ Extract the last element in a union
 
 ## Type Parameters
 
-| Type Parameter |
-| -------------- |
-| `U`            |
+| Type Parameter | Description |
+| -------------- | ----------- |
+| `U`            | Union type  |
+
+## Example
+
+```ts
+import type { LastInUnion } from '@kazupon/jts-utils'
+
+type MyUnion = { a: string } | { b: number } | { c: boolean }
+type LastElement = LastInUnion<MyUnion>
+// Resulting type:
+// {
+//   c: boolean
+// }
+```

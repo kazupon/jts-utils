@@ -14,6 +14,21 @@ Convert a union to intersection
 
 ## Type Parameters
 
-| Type Parameter |
-| -------------- |
-| `U`            |
+| Type Parameter | Description |
+| -------------- | ----------- |
+| `U`            | Union type  |
+
+## Example
+
+```ts
+import type { UnionToIntersection } from '@kazupon/jts-utils'
+
+type Union = { a: string } | { b: number }
+type Intersection = UnionToIntersection<Union>
+// Resulting type:
+// {
+//   a: string
+// } & {
+//   b: number
+// }
+```

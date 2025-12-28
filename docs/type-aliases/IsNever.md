@@ -14,6 +14,15 @@ Check never type
 
 ## Type Parameters
 
-| Type Parameter |
-| -------------- |
-| `T`            |
+| Type Parameter | Description   |
+| -------------- | ------------- |
+| `T`            | Type to check |
+
+## Example
+
+```ts
+import type { IsNever } from '@kazupon/jts-utils'
+
+type A = IsNever<never> // true
+type B = IsNever<string> // false
+```

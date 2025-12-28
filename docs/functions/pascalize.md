@@ -23,3 +23,12 @@ pascalize string
 `string`
 
 pascalized string
+
+## Example
+
+```ts
+import { pascalize } from '@kazupon/jts-utils'
+
+const result = pascalize('hello world')
+// result: 'HelloWorld'
+```

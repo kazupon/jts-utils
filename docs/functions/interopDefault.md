@@ -29,3 +29,25 @@ resolve module with interop default for CommonJS and ES Modules
 `Promise`\<[`InteropModuleDefault`](../type-aliases/InteropModuleDefault.md)\<`T`\>\>
 
 resolved module
+
+## Example
+
+```ts
+import { interopDefault } from '@kazupon/jts-utils'
+
+// For ES Module
+const esmModule = {
+  default: {
+    foo: 'bar'
+  }
+}
+const resolvedEsm = await interopDefault(esmModule)
+// resolvedEsm: { foo: 'bar' }
+
+// For CommonJS Module
+const cjsModule = {
+  foo: 'bar'
+}
+const resolvedCjs = await interopDefault(cjsModule)
+// resolvedCjs: { foo: 'bar' }
+```

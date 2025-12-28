@@ -14,6 +14,15 @@ whether the type is null
 
 ## Type Parameters
 
-| Type Parameter |
-| -------------- |
-| `T`            |
+| Type Parameter | Description   |
+| -------------- | ------------- |
+| `T`            | Type to check |
+
+## Example
+
+```ts
+import type { IsNull } from '@kazupon/jts-utils'
+
+type A = IsNull<null> // true
+type B = IsNull<string> // false
+```

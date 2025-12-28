@@ -14,7 +14,29 @@ Merge two types
 
 ## Type Parameters
 
-| Type Parameter |
-| -------------- |
-| `F`            |
-| `S`            |
+| Type Parameter | Description |
+| -------------- | ----------- |
+| `F`            | First type  |
+| `S`            | Second type |
+
+## Example
+
+```ts
+import type { Merge } from '@kazupon/jts-utils'
+
+type First = {
+  a: number
+  b: string
+}
+type Second = {
+  b: boolean
+  c: string
+}
+type Merged = Merge<First, Second>
+// Resulting type:
+// {
+//   a: number
+//   b: boolean
+//   c: string
+// }
+```
