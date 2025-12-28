@@ -16,7 +16,7 @@ test('basic', () => {
   expect(handler).toBeCalledTimes(1)
 })
 
-test('mlutiple reigster', () => {
+test('mlutiple register', () => {
   const handler1 = vi.fn()
   const handler2 = vi.fn()
 

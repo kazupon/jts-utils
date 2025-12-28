@@ -103,7 +103,7 @@ interface Emittable<Events extends Record<EventType, unknown> = {}> {
 /**
  * Create a event emitter
  *
- * Thie event emitter forked and inspired from the below:
+ * This event emitter forked and inspired from the below:
  * - original repository url: https://github.com/developit/mitt
  * - code url: https://github.com/developit/mitt/blob/master/src/index.ts
  * - author: Jason Miller (https://github.com/developit)
