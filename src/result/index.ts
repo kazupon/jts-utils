@@ -3,8 +3,8 @@
  *
  * @example
  * ```ts
- * import { ok, err } from '@kazupon/jts-utils/result'
- * import type { Result } from '@kazupon/jts-utils/result'
+ * import { ok, err } from '@kazupon/jts-utils'
+ * import type { Result } from '@kazupon/jts-utils'
  * ```
  *
  * @module Result
@@ -22,6 +22,8 @@
  *
  * @example
  * ```ts
+ * import type { Ok } from '@kazupon/jts-utils'
+ *
  * const result: Ok<number> = { ok: true, value: 42 };
  * ```
  */
@@ -34,6 +36,8 @@ export type Ok<T> = { ok: true; value: T } // eslint-disable-line jsdoc/require-
  *
  * @example
  * ```ts
+ * import type { Err } from '@kazupon/jts-utils'
+ *
  * // With an Error object
  * const errorObject: Err<Error> = { ok: false, error: new Error("Something went wrong") };
  * // With a string error
@@ -50,6 +54,8 @@ export type Err<E> = { ok: false; error: E } // eslint-disable-line jsdoc/requir
  *
  * @example
  * ```ts
+ * import type { Result } from '@kazupon/jts-utils'
+ *
  * // Success example
  * const successResult: Result<number, string> = { ok: true, value: 42 };
  *
@@ -64,6 +70,8 @@ export type Result<T = void, E = unknown> = Ok<T> | Err<E>
  *
  * @example
  * ```ts
+ * import { ok } from '@kazupon/jts-utils'
+ *
  * const result = ok(42); // Type is Ok<number>
  * ```
  *
@@ -81,6 +89,8 @@ export function ok<T = void>(value?: T): Ok<T> {
  *
  * @example
  * ```ts
+ * import { err } from '@kazupon/jts-utils'
+ *
  * const result = err("An error occurred"); // Type is Err<string>
  * ```
  *
@@ -98,6 +108,9 @@ export function err<E>(error: E): Err<E> {
  *
  * @example
  * ```ts
+ * import { isOk } from '@kazupon/jts-utils'
+ * import type { Result } from '@kazupon/jts-utils'
+ *
  * const result: Result<number, string> = someFunction();
  * if (isOk(result)) {
  *   // Handle success
@@ -123,6 +136,9 @@ export function isOk<T, E>(result: Result<T, E>): result is Ok<T> {
  *
  * @example
  * ```ts
+ * import { isErr } from '@kazupon/jts-utils'
+ * import type { Result } from '@kazupon/jts-utils'
+ *
  * const result: Result<number, string> = someFunction();
  * if (isErr(result)) {
  *   // Handle failure
@@ -145,6 +161,9 @@ export function isErr<T, E>(result: Result<T, E>): result is Err<E> {
  *
  * @example
  * ```ts
+ * import { unwrap } from '@kazupon/jts-utils'
+ * import type { Result } from '@kazupon/jts-utils'
+ *
  * const result: Result<number, string> = someFunction();
  * try {
  *   const value = unwrap(result);

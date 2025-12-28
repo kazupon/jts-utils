@@ -3,7 +3,7 @@
  *
  * @example
  * ```ts
- * import { Awaitable } from '@kazupon/jts-utils/types'
+ * import type { Awaitable } from '@kazupon/jts-utils'
  * ```
  *
  * @module Types
@@ -21,7 +21,7 @@
  *
  * @example
  * ```ts
- * import type { Awaitable } from '@kazupon/jts-utils/types'
+ * import type { Awaitable } from '@kazupon/jts-utils'
  *
  * // Example with a synchronous value
  * const syncValue: Awaitable<number> = 42
@@ -38,7 +38,7 @@ export type Awaitable<T> = T | Promise<T>
  *
  * @example
  * ```ts
- * import type { InteropModuleDefault } from '@kazupon/jts-utils/types'
+ * import type { InteropModuleDefault } from '@kazupon/jts-utils'
  *
  * // Example for `default` export in ESM Module
  * type ESMModule = {
@@ -72,7 +72,7 @@ export type InteropModuleDefault<T> = T extends { default: infer U } ? U : T
  *
  * @example
  * ```ts
- * import type { UnionToIntersection } from '@kazupon/jts-utils/types'
+ * import type { UnionToIntersection } from '@kazupon/jts-utils'
  *
  * type Union = { a: string } | { b: number }
  * type Intersection = UnionToIntersection<Union>
@@ -97,7 +97,7 @@ export type UnionToIntersection<U> = (U extends unknown ? (argument: U) => 0 : n
  *
  * @example
  * ```ts
- * import type { LastInUnion } from '@kazupon/jts-utils/types'
+ * import type { LastInUnion } from '@kazupon/jts-utils'
  *
  * type MyUnion = { a: string } | { b: number } | { c: boolean }
  * type LastElement = LastInUnion<MyUnion>
@@ -117,7 +117,7 @@ export type LastInUnion<U> =
  *
  * @example
  * ```ts
- * import type { UnionToTuple } from '@kazupon/jts-utils/types'
+ * import type { UnionToTuple } from '@kazupon/jts-utils'
  *
  * type MyUnion = { a: string } | { b: number } | { c: boolean }
  * type MyTuple = UnionToTuple<MyUnion>
@@ -141,7 +141,7 @@ export type UnionToTuple<U, Last = LastInUnion<U>> = [U] extends [never]
  *
  * @example
  * ```ts
- * import type { Merge } from '@kazupon/jts-utils/types'
+ * import type { Merge } from '@kazupon/jts-utils'
  *
  * type First = {
  *   a: number
@@ -171,7 +171,7 @@ export type Merge<F, S> = {
  *
  * @example
  * ```ts
- * import type { IsNever } from '@kazupon/jts-utils/types'
+ * import type { IsNever } from '@kazupon/jts-utils'
  *
  * type A = IsNever<never> // true
  * type B = IsNever<string> // false
@@ -186,7 +186,7 @@ export type IsNever<T> = [T] extends [never] ? true : false
  *
  * @example
  * ```ts
- * import type { IsNull } from '@kazupon/jts-utils/types'
+ * import type { IsNull } from '@kazupon/jts-utils'
  *
  * type A = IsNull<null> // true
  * type B = IsNull<string> // false
@@ -201,7 +201,7 @@ export type IsNull<T> = T extends null ? true : false
  *
  * @example
  * ```ts
- * import type { IsObject } from '@kazupon/jts-utils/types'
+ * import type { IsObject } from '@kazupon/jts-utils'
  *
  * type A = IsObject<{ a: number }> // true
  * type B = IsObject<string> // false
@@ -216,7 +216,7 @@ export type IsObject<T> = T extends object ? (T extends Function ? false : true)
  *
  * @example
  * ```ts
- * import type { IsPlainObject } from '@kazupon/jts-utils/types'
+ * import type { IsPlainObject } from '@kazupon/jts-utils'
  *
  * type A = IsPlainObject<{ a: number }> // true
  * type B = IsPlainObject<string[]> // false
@@ -237,7 +237,7 @@ export type IsPlainObject<T> = T extends object
  *
  * @example
  * ```ts
- * import type { Overwrite } from '@kazupon/jts-utils/types'
+ * import type { Overwrite } from '@kazupon/jts-utils'
  *
  * type Original = {
  *   a: number
@@ -261,7 +261,7 @@ export type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> &
  *
  * @example
  * ```ts
- * import type { Prettify, Overwrite } from '@kazupon/jts-utils/types'
+ * import type { Prettify, Overwrite } from '@kazupon/jts-utils'
  *
  * type Original = {
  *   a: number

@@ -21,6 +21,27 @@ import type { Awaitable, InteropModuleDefault } from '../types/index.ts'
  *
  * @param mod - a module
  * @returns resolved module
+ *
+ * @example
+ * ```ts
+ * import { interopDefault } from '@kazupon/jts-utils'
+ *
+ * // For ES Module
+ * const esmModule = {
+ *   default: {
+ *     foo: 'bar'
+ *   }
+ * }
+ * const resolvedEsm = await interopDefault(esmModule)
+ * // resolvedEsm: { foo: 'bar' }
+ *
+ * // For CommonJS Module
+ * const cjsModule = {
+ *   foo: 'bar'
+ * }
+ * const resolvedCjs = await interopDefault(cjsModule)
+ * // resolvedCjs: { foo: 'bar' }
+ * ```
  */
 export async function interopDefault<T>(mod: Awaitable<T>): Promise<InteropModuleDefault<T>> {
   const resolved = await mod

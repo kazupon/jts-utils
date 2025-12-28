@@ -58,7 +58,7 @@ export interface Observable<State> extends Disposable {
  *
  * @example
  * ```ts
- * import { observe } from '@kazupon/jts-utils/observer'
+ * import { observe } from '@kazupon/jts-utils'
  *
  * // create observable
  * const observer = observe<{ a: number }>()
@@ -79,7 +79,7 @@ export interface Observable<State> extends Disposable {
  *
  * @example
  * ```ts
- * import { observe } from '@kazupon/jts-utils/observer'
+ * import { observe } from '@kazupon/jts-utils'
  *
  * // create observable with `using` syntax
  * // when the scope is exited, `observer.dispose` will be called automatically

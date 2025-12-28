@@ -19,6 +19,14 @@
  *
  * @param value - a string value
  * @returns pascalized string
+ *
+ * @example
+ * ```ts
+ * import { pascalize } from '@kazupon/jts-utils'
+ *
+ * const result = pascalize('hello world')
+ * // result: 'HelloWorld'
+ * ```
  */
 export function pascalize(value: string): string {
   return value.replaceAll(/\w+/g, w => w[0].toUpperCase() + w.slice(1).toLowerCase())
