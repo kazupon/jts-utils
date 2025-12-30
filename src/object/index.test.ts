@@ -16,7 +16,7 @@ class Foo {
 test('isObject', () => {
   expect(isObject({})).toBe(true)
   expect(isObject(new Foo())).toBe(true)
-  expect(isObject([])).toBe(true) // NOTE: array is object
+  expect(isObject([])).toBe(true) // array is object
 
   expect(isObject(null)).toBe(false)
   expect(isObject(undefined)).toBe(false)
@@ -31,7 +31,7 @@ test('isPlainObject', () => {
   expect(isPlainObject({})).toBe(true)
   expect(isPlainObject(new Foo())).toBe(true)
 
-  expect(isPlainObject([])).toBe(false) // NOTE: array is not object
+  expect(isPlainObject([])).toBe(false) // array is not object
   expect(isPlainObject(null)).toBe(false)
   expect(isPlainObject(undefined)).toBe(false)
   expect(isPlainObject(1)).toBe(false)

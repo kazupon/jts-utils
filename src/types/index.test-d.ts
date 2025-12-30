@@ -60,7 +60,7 @@ test('IsObject', () => {
   expectTypeOf<IsObject<{}>>().toEqualTypeOf<true>()
   expectTypeOf<IsObject<{ a: number }>>().toEqualTypeOf<true>()
   expectTypeOf<IsObject<Foo>>().toEqualTypeOf<true>()
-  expectTypeOf<IsObject<string[]>>().toEqualTypeOf<true>() // NOTE: Array is object
+  expectTypeOf<IsObject<string[]>>().toEqualTypeOf<true>() // Array is object
 
   expectTypeOf<IsObject<Function>>().toEqualTypeOf<false>()
   expectTypeOf<IsObject<number>>().toEqualTypeOf<false>()
@@ -76,7 +76,7 @@ test('IsPlainObject', () => {
   expectTypeOf<IsPlainObject<{ a: number }>>().toEqualTypeOf<true>()
   expectTypeOf<IsPlainObject<Foo>>().toEqualTypeOf<true>()
 
-  expectTypeOf<IsPlainObject<string[]>>().toEqualTypeOf<false>() // NOTE: Array is not object
+  expectTypeOf<IsPlainObject<string[]>>().toEqualTypeOf<false>() // Array is not object
   expectTypeOf<IsPlainObject<Function>>().toEqualTypeOf<false>()
   expectTypeOf<IsPlainObject<string>>().toEqualTypeOf<false>()
   expectTypeOf<IsPlainObject<null>>().toEqualTypeOf<false>()
