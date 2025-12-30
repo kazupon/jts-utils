@@ -159,7 +159,7 @@
     "eslint-plugin-yml": "^1.19.1",
     "gh-changelogen": "^0.2.8",
     "jsr": "^0.13.5",
-    "jsr-exports-lint": "^0.4.1",
+    "jsr-exports-lint": "^0.4.2",
     "knip": "^5.77.1",
     "lint-staged": "^16.2.7",
     "oxfmt": "^0.20.0",

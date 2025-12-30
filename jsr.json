@@ -9,6 +9,9 @@
   "exports": {
     ".": "./src/index.ts",
     "./array": "./src/array/index.ts",
+    "./object": "./src/object/index.ts",
+    "./result": "./src/result/index.ts",
+    "./event": "./src/event/index.ts",
     "./string": "./src/string/index.ts",
     "./observer": "./src/observer/index.ts",
     "./module": "./src/module/index.ts",

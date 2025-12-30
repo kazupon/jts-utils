@@ -69,8 +69,8 @@ importers:
         specifier: ^0.13.5
         version: 0.13.5
       jsr-exports-lint:
-        specifier: ^0.4.1
-        version: 0.4.1(tsdown@0.18.2(@typescript/native-preview@7.0.0-dev.20251222.1)(oxc-resolver@11.16.0)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3))
+        specifier: ^0.4.2
+        version: 0.4.2(tsdown@0.18.2(@typescript/native-preview@7.0.0-dev.20251221.1)(oxc-resolver@11.16.0)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3))
       knip:
         specifier: ^5.77.1
         version: 5.77.1(@types/node@25.0.3)(typescript@5.9.3)
@@ -1882,8 +1882,8 @@ packages:
   jsonc-parser@3.3.1:
     resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
 
-  jsr-exports-lint@0.4.1:
-    resolution: {integrity: sha512-ViJFOrJJ19JfB7TBNUjsAsyKTY4YE3ffJZYShV7VVPfZmjfU2gtyNIcQ3DK6BNQ9EmECRRax0Zfm4F4lsRcA7w==}
+  jsr-exports-lint@0.4.2:
+    resolution: {integrity: sha512-CyMLNmmq1PKOPr2VtcwvDZF67jkkOq+DVhPdAi/kzr5N1HGZ/iNqSJq2z3eG000BANzi8EKkLOLZqGijm+2VwQ==}
     engines: {node: '>= 20'}
     peerDependencies:
       tsdown: '>=0.9.6'
@@ -4276,7 +4276,7 @@ snapshots:
 
   jsonc-parser@3.3.1: {}
 
-  jsr-exports-lint@0.4.1(tsdown@0.18.2(@typescript/native-preview@7.0.0-dev.20251222.1)(oxc-resolver@11.16.0)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3)):
+  jsr-exports-lint@0.4.2(tsdown@0.18.2(@typescript/native-preview@7.0.0-dev.20251221.1)(oxc-resolver@11.16.0)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3)):
     dependencies:
       picocolors: 1.1.1
     optionalDependencies:

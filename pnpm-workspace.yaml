@@ -5,6 +5,7 @@ minimumReleaseAgeExclude:
   - knip
   - '@kazupon/eslint-config'
   - '@kazupon/eslint-plugin'
+  - jsr-exports-lint
 
 onlyBuiltDependencies:
   - deno
