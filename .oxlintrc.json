@@ -6,6 +6,17 @@
     {
       "files": ["**/*.{test,spec}.{ts,tsx}"],
       "plugins": ["vitest"]
+    },
+    {
+      "files": ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+      "rules": {
+        "@kazupon/no-tag-comments": [
+          "warn",
+          {
+            "tags": ["TODO", "FIXME", "BUG"]
+          }
+        ]
+      }
     }
   ],
   "ignorePatterns": [
