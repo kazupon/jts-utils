@@ -177,23 +177,15 @@
   "prettier": "@kazupon/prettier-config",
   "lint-staged": {
     "*.ts?(x)": [
-      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
+      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json --no-error-on-unmatched-pattern",
       "oxlint --config .oxlintrc.json --type-aware --fix"
     ],
     "*.{js,mjs,cjs}": [
-      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
+      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json --no-error-on-unmatched-pattern",
       "oxlint --config .oxlintrc.json --type-aware --fix"
     ],
-    "*.{jsonc,json5,md,yml,yaml}": [
-      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
-      "eslint --fix"
-    ],
-    "!(package).json": [
-      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
-      "eslint --fix"
-    ],
-    "!(pnpm-lock).{yml,yaml}": [
-      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json",
+    "*.{json,jsonc,json5,md,yml,yaml}": [
+      "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json --no-error-on-unmatched-pattern",
       "eslint --fix"
     ]
   }
