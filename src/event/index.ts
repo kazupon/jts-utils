@@ -17,24 +17,24 @@
 /**
  * Event type
  */
-type EventType = string | symbol
+export type EventType = string | symbol
 
 /**
  * Event handler
  */
-type EventHandler<T = unknown> = (payload?: T) => void
+export type EventHandler<T = unknown> = (payload?: T) => void
 
 /**
  * Event stop handler
  */
-interface EventStopHandler extends Disposable {
+export interface EventStopHandler extends Disposable {
   (): void
 }
 
 /**
  * Wildcard event handler
  */
-type WildcardEventHandler<T = Record<string, unknown>> = (
+export type WildcardEventHandler<T = Record<string, unknown>> = (
   event: keyof T,
   payload?: T[keyof T]
 ) => void
@@ -42,17 +42,17 @@ type WildcardEventHandler<T = Record<string, unknown>> = (
 /**
  * Event handler list
  */
-type EventHandlerList<T = unknown> = Array<EventHandler<T>>
+export type EventHandlerList<T = unknown> = Array<EventHandler<T>>
 
 /**
  * Wildcard event handler list
  */
-type WildcardEventHandlerList<T = Record<string, unknown>> = Array<WildcardEventHandler<T>>
+export type WildcardEventHandlerList<T = Record<string, unknown>> = Array<WildcardEventHandler<T>>
 
 /**
  * Event handler map
  */
-type EventHandlerMap<Events extends Record<EventType, unknown>> = Map<
+export type EventHandlerMap<Events extends Record<EventType, unknown>> = Map<
   keyof Events | '*',
   EventHandlerList<Events[keyof Events]> | WildcardEventHandlerList<Events>
 >
@@ -60,7 +60,7 @@ type EventHandlerMap<Events extends Record<EventType, unknown>> = Map<
 /**
  * Event emitter interface
  */
-interface Emittable<Events extends Record<EventType, unknown> = {}> {
+export interface Emittable<Events extends Record<EventType, unknown> = {}> {
   /**
    * A map of event names of registered event handlers
    */
