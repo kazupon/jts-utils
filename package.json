@@ -43,6 +43,13 @@
       "browser": "./dist/index.js",
       "default": "./dist/index.js"
     },
+    "./abort": {
+      "types": "./dist/abort/index.d.ts",
+      "import": "./dist/abort/index.js",
+      "require": "./dist/abort/index.js",
+      "browser": "./dist/abort/index.js",
+      "default": "./dist/abort/index.js"
+    },
     "./array": {
       "types": "./dist/array/index.d.ts",
       "import": "./dist/array/index.js",

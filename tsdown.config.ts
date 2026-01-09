@@ -13,6 +13,7 @@ const config: UserConfig = defineConfig({
     'src/observer/index.ts',
     'src/module/index.ts',
     'src/types/index.ts',
+    'src/abort/index.ts',
     'src/types/vue.ts'
   ],
   publint: true,
