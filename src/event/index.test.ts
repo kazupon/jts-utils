@@ -1,4 +1,4 @@
-import { test, expect, vi } from 'vitest'
+import { test, expect, vi, expectTypeOf } from 'vitest'
 import { createEmitter } from './index.ts'
 
 test('basic', () => {
@@ -42,9 +42,13 @@ test('multiple event', () => {
   const handler1 = vi.fn()
   const handler2 = vi.fn()
 
-  const emitter = createEmitter<{ foo: string; bar: { greeting: string } }>()
+  const emitter = createEmitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
   emitter.on('foo', handler1)
   emitter.on('bar', handler2)
+  emitter.on('bar', payload => {
+    expectTypeOf(payload).toEqualTypeOf<{ greeting: string }>()
+  })
+  emitter.on('baz', () => {})
   emitter.emit('foo', 'hello')
   emitter.emit('bar', { greeting: 'hello' })
 
@@ -79,6 +83,20 @@ test('* event', () => {
   emitter.emit('bar', 1)
 
   expect(handler1).toBeCalledTimes(2)
+})
+
+test('typecheck', () => {
+  const emitter = createEmitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
+  emitter.on('foo', payload => {
+    expectTypeOf(payload).toEqualTypeOf<string>()
+  })
+  emitter.on('bar', payload => {
+    expectTypeOf(payload).toEqualTypeOf<{ greeting: string }>()
+  })
+  emitter.on('baz', () => {})
+  emitter.emit('foo', 'hello')
+  emitter.emit('bar', { greeting: 'hello' })
+  emitter.emit('baz')
 })
 
 test('dispose stop handler', () => {
