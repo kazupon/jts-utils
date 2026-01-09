@@ -1,5 +1,5 @@
 import { test, expect, vi } from 'vitest'
-import { waitOnce } from './once.ts'
+import { waitOnce } from './wait.ts'
 
 test('resolves when event is fired', async () => {
   const target = new EventTarget()

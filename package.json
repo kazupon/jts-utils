@@ -92,6 +92,27 @@
       "browser": "./dist/event/index.js",
       "default": "./dist/event/index.js"
     },
+    "./event/emitter": {
+      "types": "./dist/event/emitter.d.ts",
+      "import": "./dist/event/emitter.js",
+      "require": "./dist/event/emitter.js",
+      "browser": "./dist/event/emitter.js",
+      "default": "./dist/event/emitter.js"
+    },
+    "./event/target": {
+      "types": "./dist/event/target.d.ts",
+      "import": "./dist/event/target.js",
+      "require": "./dist/event/target.js",
+      "browser": "./dist/event/target.js",
+      "default": "./dist/event/target.js"
+    },
+    "./event/wait": {
+      "types": "./dist/event/wait.d.ts",
+      "import": "./dist/event/wait.js",
+      "require": "./dist/event/wait.js",
+      "browser": "./dist/event/wait.js",
+      "default": "./dist/event/wait.js"
+    },
     "./types": {
       "types": "./dist/types/index.d.ts"
     },
