@@ -5,7 +5,7 @@
 
 import { abortError } from '../abort/index.ts'
 
-// TODO: `once` should support optoin which is same as `addEventListener` options
+// TODO: `once` should support option which is same as `addEventListener` options
 
 /**
  * Add an event listener that resolves once when the event is fired or rejects if aborted
