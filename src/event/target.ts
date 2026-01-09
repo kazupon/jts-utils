@@ -39,16 +39,16 @@ export function on<T extends EventTarget>(
   _options?: AddEventListenerOptions
 ): EventTargetStopHandler {
   // TODO: implement this
-  throw new Error('Not implemented yet')
 
   const stop = () => {
     throw new Error('Not implemented yet')
   }
-  stop[Symbol.dispose] = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- FIXME
+  ;(stop as any)[Symbol.dispose] = () => {
     throw new Error('Not implemented yet')
   }
 
-  return stop
+  return stop as unknown as EventTargetStopHandler
 }
 
 /**

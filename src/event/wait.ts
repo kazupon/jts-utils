@@ -1,5 +1,5 @@
 /**
- * Event wating utils
+ * Event waiting utils
  *
  * @example
  * ```ts
