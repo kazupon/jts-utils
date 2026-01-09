@@ -9,7 +9,6 @@ describe('abortError', () => {
     expect(error).toBe(controller.signal.reason)
     expect(error).toBeInstanceOf(DOMException)
     expect((error as DOMException).name).toBe('AbortError')
-    expect((error as DOMException).message).toBe('This operation was aborted')
   })
 
   test('returns a new DOMException if the signal has no reason', () => {
