@@ -28,11 +28,14 @@ import { toArray } from '@kazupon/jts-utils'
 | [pascalize](functions/pascalize.md)           | pascalize string                                                |
 | [toArray](functions/toArray.md)               | convert to array                                                |
 | [unwrap](functions/unwrap.md)                 | Utility function to extract the success value from a Result     |
+| [waitOnce](functions/waitOnce.md)             | Wait for an event to be fired once on the target                |
 
 ## Interfaces
 
 | Interface                                                                            | Description                     |
 | ------------------------------------------------------------------------------------ | ------------------------------- |
+| [Emittable](interfaces/Emittable.md)                                                 | Event emitter interface         |
+| [EventStopHandler](interfaces/EventStopHandler.md)                                   | Event stop handler              |
 | [Observable](interfaces/Observable.md)                                               | State value observable          |
 | [ObservableStateUnsubscribeHandler](interfaces/ObservableStateUnsubscribeHandler.md) | State value unsubscribe handler |
 
@@ -42,6 +45,10 @@ import { toArray } from '@kazupon/jts-utils'
 | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | [Awaitable](type-aliases/Awaitable.md)                                             | Define a promise type that can be await from T                     |
 | [Err](type-aliases/Err.md)                                                         | Type representing a failure value                                  |
+| [EventHandler](type-aliases/EventHandler.md)                                       | Event handler                                                      |
+| [EventHandlerList](type-aliases/EventHandlerList.md)                               | Event handler list                                                 |
+| [EventHandlerMap](type-aliases/EventHandlerMap.md)                                 | Event handler map                                                  |
+| [EventType](type-aliases/EventType.md)                                             | Event type                                                         |
 | [InteropModuleDefault](type-aliases/InteropModuleDefault.md)                       | Extract module type with interoperability for CJS `module.exports` |
 | [IsNever](type-aliases/IsNever.md)                                                 | Check never type                                                   |
 | [IsNull](type-aliases/IsNull.md)                                                   | whether the type is null                                           |
@@ -56,3 +63,5 @@ import { toArray } from '@kazupon/jts-utils'
 | [Result](type-aliases/Result.md)                                                   | Result type representing success or failure                        |
 | [UnionToIntersection](type-aliases/UnionToIntersection.md)                         | Convert a union to intersection                                    |
 | [UnionToTuple](type-aliases/UnionToTuple.md)                                       | Convert a union to tuple                                           |
+| [WildcardEventHandler](type-aliases/WildcardEventHandler.md)                       | Wildcard event handler                                             |
+| [WildcardEventHandlerList](type-aliases/WildcardEventHandlerList.md)               | Wildcard event handler list                                        |

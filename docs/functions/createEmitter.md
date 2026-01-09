@@ -20,12 +20,12 @@ This event emitter forked and inspired from the below:
 
 ## Type Parameters
 
-| Type Parameter                                        |
-| ----------------------------------------------------- |
-| `Events` _extends_ `Record`\<`EventType`, `unknown`\> |
+| Type Parameter                                                                        |
+| ------------------------------------------------------------------------------------- |
+| `Events` _extends_ `Record`\<[`EventType`](../type-aliases/EventType.md), `unknown`\> |
 
 ## Returns
 
-`Readonly`\<`Emittable`\<`Events`\>\>
+`Readonly`\<[`Emittable`](../interfaces/Emittable.md)\<`Events`\>\>
 
-An event emitter, which is Emittable
+An event emitter, which is [Emittable](../interfaces/Emittable.md)

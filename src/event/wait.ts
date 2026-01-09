@@ -1,4 +1,15 @@
 /**
+ * Event wating utils
+ *
+ * @example
+ * ```ts
+ * import { waitOnce } from '@kazupon/jts-utils/event/wait'
+ * ```
+ *
+ * @module event/wait
+ */
+
+/**
  * @license MIT
  * @author kazuya kawaguchi (a.k.a. kazupon)
  */
@@ -47,7 +58,7 @@ import { abortError } from '../abort/index.ts'
  */
 export function waitOnce<T extends EventTarget>(
   target: T,
-  type: string,
+  type: string, // TODO: type safety and 'type' key completion from EventMaps
   listenerOrSignal?: EventListener | AbortSignal,
   signal?: AbortSignal
 ): Promise<void> {
@@ -80,4 +91,37 @@ export function waitOnce<T extends EventTarget>(
     // signal option automatically removes listener when aborted
     target.addEventListener(type, onEvent as EventListener, { once: true, signal })
   })
+}
+
+/**
+ * An options for {@link waitFor}
+ */
+export interface WaitForOptions extends AddEventListenerOptions {
+  /**
+   * Number of times to wait for the event
+   *
+   * @default 1
+   */
+  times?: number
+}
+
+/**
+ * Wait for an event to be fired on the target
+ *
+ * @typeParam T - The type of the target
+ *
+ * @param _target - The event target
+ * @param _type - The event type
+ * @param _listenerOrOptions - An optional event listener or {@link WaitForOptions}
+ * @param _options - An optional {@link WaitForOptions}
+ * @throws {DOMException | unknown} when the signal is aborted
+ */
+export function waitFor<T extends EventTarget>(
+  _target: T,
+  _type: string, // TODO: type safety and 'type' key completion from EventMaps
+  _listenerOrOptions?: EventListener | WaitForOptions,
+  _options?: WaitForOptions
+): Promise<void> {
+  // TODO: implement this
+  throw new Error('Not implemented yet')
 }
