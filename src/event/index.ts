@@ -106,11 +106,11 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
    * Note Manually firing "*" handlers should be not supported
    *
    * @param event - An {@link EventType}
-   * @param args - An event payload, optional if the event type is `undefined`
+   * @param payload - An event payload, optional if the event type is `undefined`
    */
   emit<Key extends keyof Events>(
     event: Key,
-    ...args: Events[Key] extends undefined ? [] : [payload: Events[Key]]
+    ...payload: Events[Key] extends undefined ? [] : [payload: Events[Key]]
   ): void
 }
 
