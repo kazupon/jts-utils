@@ -212,3 +212,5 @@ export function createEmitter<Events extends Record<EventType, unknown>>(): Read
     emit
   })
 }
+
+export * from './once.ts'
