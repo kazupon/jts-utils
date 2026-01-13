@@ -115,6 +115,18 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
 }
 
 /**
+ * An options for {@link createEmitter}
+ */
+export interface EmitterOptions {
+  /**
+   * Disable wildcard event handlers
+   *
+   * @default true
+   */
+  disableWildcard?: boolean
+}
+
+/**
  * Create a event emitter
  *
  * This event emitter forked and inspired from the below:
@@ -122,11 +134,14 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
  * - code url: https://github.com/developit/mitt/blob/master/src/index.ts
  * - author: Jason Miller (https://github.com/developit)
  *
+ * @param options - An optional {@link EmitterOptions}
  * @returns An event emitter, which is {@link Emittable}
  */
-export function createEmitter<Events extends Record<EventType, unknown>>(): Readonly<
-  Emittable<Events>
-> {
+export function createEmitter<Events extends Record<EventType, unknown>>(
+  options?: EmitterOptions
+): Readonly<Emittable<Events>> {
+  const disableWildcard = options?.disableWildcard ?? true
+
   type GenericEventHandler = EventHandler<Events[keyof Events]> | WildcardEventHandler<Events>
   const events = new Map() as EventHandlerMap<Events>
 
@@ -203,6 +218,9 @@ export function createEmitter<Events extends Record<EventType, unknown>>(): Read
     ;((events.get(event) || []) as EventHandlerList<Events[keyof Events]>)
       .slice()
       .map(handler => handler(payload))
+    if (disableWildcard) {
+      return
+    }
     ;(events.get('*') || []).slice().map(handler => handler(event, payload))
   }
 

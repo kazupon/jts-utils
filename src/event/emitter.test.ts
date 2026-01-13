@@ -68,21 +68,24 @@ test('multiple event', () => {
 
 test('* event', () => {
   const handler1 = vi.fn()
+  const handler2 = vi.fn()
 
   const emitter = createEmitter<{ foo: string; bar: number }>()
   emitter.on('*', handler1)
   emitter.emit('foo', 'hello')
   emitter.emit('bar', 1)
 
-  expect(handler1).toBeCalledTimes(2)
-  expect(handler1).toHaveBeenNthCalledWith(1, 'foo', 'hello')
-  expect(handler1).toHaveBeenNthCalledWith(2, 'bar', 1)
+  expect(handler1).not.toBeCalled()
 
-  emitter.off('*', handler1)
-  emitter.emit('foo', 'hello')
-  emitter.emit('bar', 1)
+  const emitter2 = createEmitter<{ foo: string; bar: number }>({ disableWildcard: false })
+  emitter2.on('*', handler2)
+  emitter2.emit('foo', 'hello')
+  emitter2.emit('bar', 1)
+  expect(handler2).toBeCalledTimes(2)
+  expect(handler2).toHaveBeenNthCalledWith(1, 'foo', 'hello')
+  expect(handler2).toHaveBeenNthCalledWith(2, 'bar', 1)
 
-  expect(handler1).toBeCalledTimes(2)
+  emitter2.off('*', handler2)
 })
 
 test('typecheck', () => {
