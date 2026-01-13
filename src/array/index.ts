@@ -6,7 +6,7 @@
  * import { toArray } from '@kazupon/jts-utils/array'
  * ```
  *
- * @module Array
+ * @module array
  */
 
 /**

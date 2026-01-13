@@ -7,7 +7,7 @@
  * import type { Result } from '@kazupon/jts-utils'
  * ```
  *
- * @module Result
+ * @module result
  */
 
 /**
@@ -36,7 +36,7 @@ export type Ok<T> = { ok: true; value: T } // eslint-disable-line jsdoc/require-
  *
  * @example
  * ```ts
- * import type { Err } from '@kazupon/jts-utils'
+ * import type { Err } from '@kazupon/jts-utils/result'
  *
  * // With an Error object
  * const errorObject: Err<Error> = { ok: false, error: new Error("Something went wrong") };

@@ -3,10 +3,10 @@
  *
  * @example
  * ```ts
- * import type { MaybeRef, MaybeRefOrGetter } from '@kazupon/jts-utils/vue'
+ * import type { MaybeRef, MaybeRefOrGetter } from '@kazupon/jts-utils/types/vue'
  * ```
  *
- * @module Vue
+ * @module types/vue
  */
 
 /**

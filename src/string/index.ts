@@ -6,7 +6,7 @@
  * import { pascalize } from '@kazupon/jts-utils/string'
  * ```
  *
- * @module String
+ * @module string
  */
 
 /**

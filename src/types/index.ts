@@ -3,10 +3,10 @@
  *
  * @example
  * ```ts
- * import type { Awaitable } from '@kazupon/jts-utils'
+ * import type { Awaitable } from '@kazupon/jts-utils/types'
  * ```
  *
- * @module Types
+ * @module types
  */
 
 /**
