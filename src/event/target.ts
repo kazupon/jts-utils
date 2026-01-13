@@ -3,7 +3,7 @@
  *
  * @example
  * ```ts
- * import { waitOnce } from '@kazupon/jts-utils/event/wait'
+ * import { waitOnce } from '@kazupon/jts-utils/event/target'
  * ```
  *
  * @module event/target

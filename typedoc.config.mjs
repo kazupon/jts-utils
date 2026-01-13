@@ -6,14 +6,19 @@ export default {
    * ref: https://typedoc.org/documents/Options.html
    */
   entryPoints: [
-    './src/index.ts'
-    // './src/array/index.ts',
-    // './src/string/index.ts',
-    // './src/observer/index.ts',
-    // './src/object/index.ts',
-    // './src/module/index.ts',
-    // './src/types/index.ts',
-    // './src/types/vue.ts'
+    './src/abort/index.ts',
+    './src/result/index.ts',
+    './src/array/index.ts',
+    './src/event/index.ts',
+    './src/event/emitter.ts',
+    './src/event/target.ts',
+    './src/event/wait.ts',
+    './src/string/index.ts',
+    './src/observer/index.ts',
+    './src/object/index.ts',
+    './src/module/index.ts',
+    './src/types/index.ts',
+    './src/types/vue.ts'
   ],
   out: 'docs',
   plugin: ['typedoc-plugin-markdown'],

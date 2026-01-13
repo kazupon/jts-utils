@@ -6,7 +6,7 @@
  * import { isObject, isPlainObject } from '@kazupon/jts-utils/object'
  * ```
  *
- * @module Object
+ * @module object
  */
 
 /**

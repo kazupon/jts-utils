@@ -6,7 +6,7 @@
  * import { interopDefault } from '@kazupon/jts-utils/module'
  * ```
  *
- * @module Module
+ * @module module
  */
 
 /**

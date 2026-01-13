@@ -32,17 +32,10 @@
   "type": "module",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "docs"
   ],
-  "module": "dist/index.js",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "browser": "./dist/index.js",
-      "default": "./dist/index.js"
-    },
     "./abort": {
       "types": "./dist/abort/index.d.ts",
       "import": "./dist/abort/index.js",
@@ -119,9 +112,8 @@
     "./types/vue": {
       "types": "./dist/types/vue.d.ts"
     },
-    "./*": "./*"
+    "./package.json": "./package.json"
   },
-  "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [

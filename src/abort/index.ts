@@ -3,10 +3,10 @@
  *
  * @example
  * ```ts
- * import { abortError, throwIfAborted } from '@kazupon/jts-utils'
+ * import { abortError, throwIfAborted } from '@kazupon/jts-utils/abort'
  * ```
  *
- * @module Abort
+ * @module abort
  */
 
 /**

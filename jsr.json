@@ -7,7 +7,6 @@
     "exclude": ["src/**/*.test.ts", "src/**/*.test-d.ts"]
   },
   "exports": {
-    ".": "./src/index.ts",
     "./abort": "./src/abort/index.ts",
     "./array": "./src/array/index.ts",
     "./object": "./src/object/index.ts",

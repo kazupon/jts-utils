@@ -5,7 +5,6 @@ import type { UserConfig } from 'tsdown'
 
 const config: UserConfig = defineConfig({
   entry: [
-    'src/index.ts',
     'src/array/index.ts',
     'src/string/index.ts',
     'src/object/index.ts',

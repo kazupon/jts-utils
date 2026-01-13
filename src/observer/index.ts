@@ -6,7 +6,7 @@
  * import { observe } from '@kazupon/jts-utils/observer'
  * ```
  *
- * @module Observer
+ * @module observer
  */
 
 /**
