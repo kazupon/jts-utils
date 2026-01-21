@@ -118,3 +118,83 @@ test('dispose stop handler', () => {
   emitter.emit('foo', 'world')
   expect(handler).toBeCalledTimes(1)
 })
+
+test('once basic', () => {
+  const handler = vi.fn()
+
+  const emitter = createEmitter<{ foo: number }>()
+  emitter.once('foo', handler)
+  emitter.emit('foo', 1)
+  emitter.emit('foo', 2)
+
+  expect(handler).toBeCalledTimes(1)
+  expect(handler).toHaveBeenNthCalledWith(1, 1)
+})
+
+test('once manual stop', () => {
+  const handler = vi.fn()
+
+  const emitter = createEmitter<{ foo: number }>()
+  const stop = emitter.once('foo', handler)
+
+  stop()
+  emitter.emit('foo', 1)
+
+  expect(handler).not.toBeCalled()
+})
+
+test('once * event', () => {
+  const handler = vi.fn()
+
+  const emitter = createEmitter<{ foo: string; bar: number }>({ disableWildcard: false })
+  emitter.once('*', handler)
+  emitter.emit('foo', 'hello')
+  emitter.emit('bar', 1)
+
+  expect(handler).toBeCalledTimes(1)
+  expect(handler).toHaveBeenNthCalledWith(1, 'foo', 'hello')
+})
+
+test('once typecheck', () => {
+  const emitter = createEmitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
+  emitter.once('foo', payload => {
+    expectTypeOf(payload).toEqualTypeOf<string>()
+  })
+  emitter.once('bar', payload => {
+    expectTypeOf(payload).toEqualTypeOf<{ greeting: string }>()
+  })
+  emitter.once('baz', () => {})
+  emitter.emit('foo', 'hello')
+  emitter.emit('bar', { greeting: 'hello' })
+  emitter.emit('baz')
+})
+
+test('once multiple handlers', () => {
+  const handler1 = vi.fn()
+  const handler2 = vi.fn()
+
+  const emitter = createEmitter<{ foo: string }>()
+  emitter.once('foo', handler1)
+  emitter.once('foo', handler2)
+  emitter.emit('foo', 'hello')
+  emitter.emit('foo', 'world')
+
+  expect(handler1).toBeCalledTimes(1)
+  expect(handler2).toBeCalledTimes(1)
+})
+
+test('once mixed with on', () => {
+  const onHandler = vi.fn()
+  const onceHandler = vi.fn()
+
+  const emitter = createEmitter<{ foo: string }>()
+  emitter.on('foo', onHandler)
+  emitter.once('foo', onceHandler)
+
+  emitter.emit('foo', 'first')
+  emitter.emit('foo', 'second')
+
+  expect(onHandler).toBeCalledTimes(2)
+  expect(onceHandler).toBeCalledTimes(1)
+  expect(onceHandler).toHaveBeenNthCalledWith(1, 'first')
+})

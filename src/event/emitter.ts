@@ -112,6 +112,26 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
     event: Key,
     ...payload: Events[Key] extends undefined ? [] : [payload: Events[Key]]
   ): void
+
+  /**
+   * Register a one-time wildcard event handler that receives all events.
+   * The handler will be automatically unregistered after the first invocation.
+   *
+   * @param event - The wildcard event type "*"
+   * @param handler - A {@link WildcardEventHandler}
+   * @returns A function to manually stop the handler before it fires
+   */
+  once(event: '*', handler: WildcardEventHandler<Events>): () => void
+
+  /**
+   * Register a one-time event handler with the event type.
+   * The handler will be automatically unregistered after the first invocation.
+   *
+   * @param event - An {@link EventType}
+   * @param handler - An {@link EventHandler}
+   * @returns A function to manually stop the handler before it fires
+   */
+  once<Key extends keyof Events>(event: Key, handler: EventHandler<Events[Key]>): () => void
 }
 
 /**
@@ -224,9 +244,45 @@ export function createEmitter<Events extends Record<EventType, unknown>>(
     ;(events.get('*') || []).slice().map(handler => handler(event, payload))
   }
 
+  /**
+   * Register a one-time wildcard event handler.
+   * This function is implemented for {@link Emittable.once}
+   *
+   * @param event - The wildcard event type "*"
+   * @param handler - A {@link WildcardEventHandler}
+   * @returns A function to manually stop the handler before it fires
+   */
+  function once(event: '*', handler: WildcardEventHandler<Events>): () => void
+  /**
+   * Register a one-time event handler.
+   * This function is implemented for {@link Emittable.once}
+   *
+   * @param event - An {@link EventType}
+   * @param handler - An {@link EventHandler}
+   * @returns A function to manually stop the handler before it fires
+   */
+  function once<Key extends keyof Events>(
+    event: Key,
+    handler: EventHandler<Events[Key]>
+  ): () => void
+  function once<Key extends keyof Events>(
+    event: Key | '*',
+    handler: GenericEventHandler
+  ): () => void {
+    const stop = on(
+      event as keyof Events,
+      ((...args: unknown[]) => {
+        stop()
+        return (handler as (...args: unknown[]) => void)(...args)
+      }) as EventHandler<Events[keyof Events]>
+    )
+    return stop
+  }
+
   return Object.freeze({
     on,
     off,
-    emit
+    emit,
+    once
   })
 }
