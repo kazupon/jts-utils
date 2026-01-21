@@ -1,7 +1,7 @@
 {
   "name": "@kazupon/jts-utils",
   "description": "Opinionated collection of JavaScript / TypeScript utils by @kazupon",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "publish": {
     "include": ["src/**/*.ts", "package.json", "jsr.json", "README.md", "CHANGELOG.md", "LICENSE"],
     "exclude": ["src/**/*.test.ts", "src/**/*.test-d.ts"]
