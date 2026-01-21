@@ -7,7 +7,7 @@
 # Type Alias: Ok\<T\>
 
 ```ts
-type Ok<T> = object;
+type Ok<T> = object
 ```
 
 Type representing a successful value
@@ -17,7 +17,7 @@ Type representing a successful value
 ```ts
 import type { Ok } from '@kazupon/jts-utils'
 
-const result: Ok<number> = { ok: true, value: 42 };
+const result: Ok<number> = { ok: true, value: 42 }
 ```
 
 ## Type Parameters

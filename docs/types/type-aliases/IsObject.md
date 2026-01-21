@@ -7,7 +7,7 @@
 # Type Alias: IsObject\<T\>
 
 ```ts
-type IsObject<T> = T extends object ? T extends Function ? false : true : false;
+type IsObject<T> = T extends object ? (T extends Function ? false : true) : false
 ```
 
 whether the type is object

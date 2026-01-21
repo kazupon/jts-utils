@@ -7,7 +7,7 @@
 # Function: getOwn()
 
 ```ts
-function getOwn<T, K>(target, key): T[K] | undefined;
+function getOwn<T, K>(target, key): T[K] | undefined
 ```
 
 get own property value of an object

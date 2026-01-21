@@ -7,7 +7,7 @@
 # Type Alias: WildcardEventHandler()\<T\>
 
 ```ts
-type WildcardEventHandler<T> = (event, payload?) => void;
+type WildcardEventHandler<T> = (event, payload?) => void
 ```
 
 Wildcard event handler

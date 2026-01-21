@@ -7,7 +7,7 @@
 # Function: toArray()
 
 ```ts
-function toArray<T>(value): T[];
+function toArray<T>(value): T[]
 ```
 
 convert to array

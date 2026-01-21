@@ -7,7 +7,7 @@
 # Type Alias: Err\<E\>
 
 ```ts
-type Err<E> = object;
+type Err<E> = object
 ```
 
 Type representing a failure value
@@ -18,9 +18,9 @@ Type representing a failure value
 import type { Err } from '@kazupon/jts-utils/result'
 
 // With an Error object
-const errorObject: Err<Error> = { ok: false, error: new Error("Something went wrong") };
+const errorObject: Err<Error> = { ok: false, error: new Error('Something went wrong') }
 // With a string error
-const errorString: Err<string> = { ok: false, error: "Something went wrong" };
+const errorString: Err<string> = { ok: false, error: 'Something went wrong' }
 ```
 
 ## Type Parameters

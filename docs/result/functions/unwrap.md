@@ -7,7 +7,7 @@
 # Function: unwrap()
 
 ```ts
-function unwrap<T, E>(result): T;
+function unwrap<T, E>(result): T
 ```
 
 Utility function to extract the success value from a Result
@@ -37,12 +37,12 @@ The success value
 import { unwrap } from '@kazupon/jts-utils'
 import type { Result } from '@kazupon/jts-utils'
 
-const result: Result<number, string> = someFunction();
+const result: Result<number, string> = someFunction()
 try {
-  const value = unwrap(result);
-  console.log("Success:", value);
+  const value = unwrap(result)
+  console.log('Success:', value)
 } catch (e) {
-  console.error("Error:", e);
+  console.error('Error:', e)
 }
 ```
 

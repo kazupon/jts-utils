@@ -7,7 +7,11 @@
 # Type Alias: UnionToIntersection\<U\>
 
 ```ts
-type UnionToIntersection<U> = U extends unknown ? (argument) => 0 : never extends (argument) => 0 ? I : never;
+type UnionToIntersection<U> = U extends unknown
+  ? (argument) => 0
+  : never extends (argument) => 0
+    ? I
+    : never
 ```
 
 Convert a union to intersection

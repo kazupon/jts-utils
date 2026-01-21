@@ -7,7 +7,7 @@
 # Type Alias: UnionToTuple\<U, Last\>
 
 ```ts
-type UnionToTuple<U, Last> = [U] extends [never] ? [] : [...UnionToTuple<Exclude<U, Last>>, Last];
+type UnionToTuple<U, Last> = [U] extends [never] ? [] : [...UnionToTuple<Exclude<U, Last>>, Last]
 ```
 
 Convert a union to tuple

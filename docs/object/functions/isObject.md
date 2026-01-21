@@ -7,7 +7,7 @@
 # Function: isObject()
 
 ```ts
-function isObject(value): value is object;
+function isObject(value): value is object
 ```
 
 check if a value is an object
@@ -29,7 +29,7 @@ whether the value is an object
 ```ts
 import { isObject } from '@kazupon/jts-utils'
 
-const result1 = isObject({}); // true
-const result2 = isObject(null); // false
-const result3 = isObject(42); // false
+const result1 = isObject({}) // true
+const result2 = isObject(null) // false
+const result3 = isObject(42) // false
 ```

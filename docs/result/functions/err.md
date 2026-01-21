@@ -7,7 +7,7 @@
 # Function: err()
 
 ```ts
-function err<E>(error): Err<E>;
+function err<E>(error): Err<E>
 ```
 
 Utility function to create an Err object for failure
@@ -35,5 +35,5 @@ An [Err](../type-aliases/Err.md) object
 ```ts
 import { err } from '@kazupon/jts-utils'
 
-const result = err("An error occurred"); // Type is Err<string>
+const result = err('An error occurred') // Type is Err<string>
 ```

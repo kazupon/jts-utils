@@ -7,7 +7,7 @@
 # Function: toTypeString()
 
 ```ts
-function toTypeString(value): string;
+function toTypeString(value): string
 ```
 
 get the type string of a value
@@ -29,7 +29,7 @@ type string with `[object ${type}]`
 ```ts
 import { toTypeString } from '@kazupon/jts-utils'
 
-const result1 = toTypeString({}); // "[object Object]"
-const result2 = toTypeString([]); // "[object Array]"
-const result4 = toTypeString(42); // "[object Number]"
+const result1 = toTypeString({}) // "[object Object]"
+const result2 = toTypeString([]) // "[object Array]"
+const result4 = toTypeString(42) // "[object Number]"
 ```

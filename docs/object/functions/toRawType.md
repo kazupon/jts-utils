@@ -7,7 +7,7 @@
 # Function: toRawType()
 
 ```ts
-function toRawType(value): string;
+function toRawType(value): string
 ```
 
 get the raw type of a value
@@ -29,7 +29,7 @@ extract "RawType" from strings like "[object RawType]"
 ```ts
 import { toRawType } from '@kazupon/jts-utils'
 
-const result1 = toRawType({}); // "Object"
-const result2 = toRawType([]); // "Array"
-const result3 = toRawType(42); // "Number"
+const result1 = toRawType({}) // "Object"
+const result2 = toRawType([]) // "Array"
+const result3 = toRawType(42) // "Number"
 ```

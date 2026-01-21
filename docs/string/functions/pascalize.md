@@ -7,7 +7,7 @@
 # Function: pascalize()
 
 ```ts
-function pascalize(value): string;
+function pascalize(value): string
 ```
 
 pascalize string

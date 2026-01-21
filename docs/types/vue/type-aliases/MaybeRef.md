@@ -7,7 +7,7 @@
 # Type Alias: MaybeRef\<T\>
 
 ```ts
-type MaybeRef<T> = T | Ref<T>;
+type MaybeRef<T> = T | Ref<T>
 ```
 
 define `ref` or premitive type

@@ -7,7 +7,7 @@
 # Type Alias: EventHandler\<T\>
 
 ```ts
-type EventHandler<T> = T extends undefined ? () => void : (payload) => void;
+type EventHandler<T> = T extends undefined ? () => void : (payload) => void
 ```
 
 Event handler

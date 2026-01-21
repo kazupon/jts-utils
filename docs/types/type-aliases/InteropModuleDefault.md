@@ -7,7 +7,7 @@
 # Type Alias: InteropModuleDefault\<T\>
 
 ```ts
-type InteropModuleDefault<T> = T extends object ? U : T;
+type InteropModuleDefault<T> = T extends object ? U : T
 ```
 
 Extract module type with interoperability for CJS `module.exports`

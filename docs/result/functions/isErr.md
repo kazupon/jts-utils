@@ -7,7 +7,7 @@
 # Function: isErr()
 
 ```ts
-function isErr<T, E>(result): result is Err<E>;
+function isErr<T, E>(result): result is Err<E>
 ```
 
 Type guard function to check if a Result is Err
@@ -37,12 +37,12 @@ true if the Result is Err, false if it is Ok
 import { isErr } from '@kazupon/jts-utils'
 import type { Result } from '@kazupon/jts-utils'
 
-const result: Result<number, string> = someFunction();
+const result: Result<number, string> = someFunction()
 if (isErr(result)) {
   // Handle failure
-  console.error(result.error);
+  console.error(result.error)
 } else {
   // Handle success
-  console.log(result.value);
+  console.log(result.value)
 }
 ```

@@ -7,7 +7,7 @@
 # Function: createEmitter()
 
 ```ts
-function createEmitter<Events>(): Readonly<Emittable<Events>>;
+function createEmitter<Events>(): Readonly<Emittable<Events>>
 ```
 
 Create a event emitter

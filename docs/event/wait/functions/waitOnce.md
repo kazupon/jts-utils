@@ -7,11 +7,7 @@
 # Function: waitOnce()
 
 ```ts
-function waitOnce<T>(
-   target,
-   type,
-   listenerOrSignal?,
-signal?): Promise<void>;
+function waitOnce<T>(target, type, listenerOrSignal?, signal?): Promise<void>
 ```
 
 Wait for an event to be fired once on the target
@@ -54,14 +50,19 @@ await waitOnce(target, 'data', controller.signal)
 // do something after 'data' event is fired or abort the waiting by controller.abort()
 
 // wait for 'click' event with listener
-await waitOnce(target, 'click', (event) => {
+await waitOnce(target, 'click', event => {
   console.log('clicked', event)
 })
 
 // wait for 'submit' event with listener and abort signal
-await waitOnce(target, 'submit', (event) => {
-  console.log('submitted', event)
-}, controller.signal)
+await waitOnce(
+  target,
+  'submit',
+  event => {
+    console.log('submitted', event)
+  },
+  controller.signal
+)
 ```
 
 ## Throws

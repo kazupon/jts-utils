@@ -7,7 +7,11 @@
 # Type Alias: IsPlainObject\<T\>
 
 ```ts
-type IsPlainObject<T> = T extends object ? T extends Function | any[] | null ? false : true : false;
+type IsPlainObject<T> = T extends object
+  ? T extends Function | any[] | null
+    ? false
+    : true
+  : false
 ```
 
 whether the type is a plain object

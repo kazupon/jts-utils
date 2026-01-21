@@ -7,7 +7,7 @@
 # Type Alias: Prettify\<T\>
 
 ```ts
-type Prettify<T> = { [K in keyof T]: T[K] } & object;
+type Prettify<T> = { [K in keyof T]: T[K] } & object
 ```
 
 Prettify a type by flattening its structure.

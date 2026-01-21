@@ -7,7 +7,7 @@
 # Type Alias: ObservableStateSubscribeHandler()\<State\>
 
 ```ts
-type ObservableStateSubscribeHandler<State> = (state) => void;
+type ObservableStateSubscribeHandler<State> = (state) => void
 ```
 
 State value subscribe handler

@@ -7,7 +7,7 @@
 # Function: interopDefault()
 
 ```ts
-function interopDefault<T>(mod): Promise<InteropModuleDefault<T>>;
+function interopDefault<T>(mod): Promise<InteropModuleDefault<T>>
 ```
 
 resolve module with interop default for CommonJS and ES Modules

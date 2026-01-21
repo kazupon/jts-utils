@@ -7,7 +7,7 @@
 # Type Alias: WildcardEventHandlerList\<T\>
 
 ```ts
-type WildcardEventHandlerList<T> = WildcardEventHandler<T>[];
+type WildcardEventHandlerList<T> = WildcardEventHandler<T>[]
 ```
 
 Wildcard event handler list

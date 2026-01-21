@@ -7,9 +7,10 @@
 # Type Alias: EventHandlerMap\<Events\>
 
 ```ts
-type EventHandlerMap<Events> = Map<keyof Events | "*",
-  | EventHandlerList<Events[keyof Events]>
-| WildcardEventHandlerList<Events>>;
+type EventHandlerMap<Events> = Map<
+  keyof Events | '*',
+  EventHandlerList<Events[keyof Events]> | WildcardEventHandlerList<Events>
+>
 ```
 
 Event handler map

@@ -7,7 +7,7 @@
 # Function: hasOwn()
 
 ```ts
-function hasOwn(target, key): boolean;
+function hasOwn(target, key): boolean
 ```
 
 check if an object has a property

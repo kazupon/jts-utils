@@ -7,7 +7,7 @@
 # Function: create()
 
 ```ts
-function create<T, R>(object): R;
+function create<T, R>(object): R
 ```
 
 create a new object

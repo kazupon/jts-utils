@@ -7,11 +7,7 @@
 # Function: waitFor()
 
 ```ts
-function waitFor<T>(
-   _target,
-   _type,
-   _listenerOrOptions?,
-_options?): Promise<void>;
+function waitFor<T>(_target, _type, _listenerOrOptions?, _options?): Promise<void>
 ```
 
 Wait for an event to be fired on the target

@@ -7,7 +7,7 @@
 # Function: throwIfAborted()
 
 ```ts
-function throwIfAborted(signal?): void;
+function throwIfAborted(signal?): void
 ```
 
 Throw an AbortError if the signal is aborted

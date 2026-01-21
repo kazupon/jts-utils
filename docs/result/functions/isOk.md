@@ -7,7 +7,7 @@
 # Function: isOk()
 
 ```ts
-function isOk<T, E>(result): result is Ok<T>;
+function isOk<T, E>(result): result is Ok<T>
 ```
 
 Type guard function to check if a Result is Ok
@@ -37,12 +37,12 @@ true if the Result is Ok, false if it is Err
 import { isOk } from '@kazupon/jts-utils'
 import type { Result } from '@kazupon/jts-utils'
 
-const result: Result<number, string> = someFunction();
+const result: Result<number, string> = someFunction()
 if (isOk(result)) {
   // Handle success
-  console.log(result.value);
+  console.log(result.value)
 } else {
   // Handle failure
-  console.error(result.error);
+  console.error(result.error)
 }
 ```

@@ -7,7 +7,7 @@
 # Type Alias: Result\<T, E\>
 
 ```ts
-type Result<T, E> = Ok<T> | Err<E>;
+type Result<T, E> = Ok<T> | Err<E>
 ```
 
 Result type representing success or failure
@@ -25,8 +25,8 @@ Result type representing success or failure
 import type { Result } from '@kazupon/jts-utils'
 
 // Success example
-const successResult: Result<number, string> = { ok: true, value: 42 };
+const successResult: Result<number, string> = { ok: true, value: 42 }
 
 // Failure example
-const failureResult: Result<number, string> = { ok: false, error: "An error occurred" };
+const failureResult: Result<number, string> = { ok: false, error: 'An error occurred' }
 ```

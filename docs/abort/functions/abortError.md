@@ -7,7 +7,7 @@
 # Function: abortError()
 
 ```ts
-function abortError(signal?, options?): unknown;
+function abortError(signal?, options?): unknown
 ```
 
 Create an AbortError

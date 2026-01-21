@@ -7,7 +7,7 @@
 # Type Alias: Awaitable\<T\>
 
 ```ts
-type Awaitable<T> = T | Promise<T>;
+type Awaitable<T> = T | Promise<T>
 ```
 
 Define a promise type that can be await from T

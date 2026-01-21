@@ -7,11 +7,7 @@
 # Function: off()
 
 ```ts
-function off<T>(
-   _target,
-   _type,
-   _listenerOrOptions?,
-   _options?): void;
+function off<T>(_target, _type, _listenerOrOptions?, _options?): void
 ```
 
 Detach an event listener from the target

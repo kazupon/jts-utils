@@ -7,7 +7,7 @@
 # Type Alias: EventHandlerList\<T\>
 
 ```ts
-type EventHandlerList<T> = EventHandler<T>[];
+type EventHandlerList<T> = EventHandler<T>[]
 ```
 
 Event handler list

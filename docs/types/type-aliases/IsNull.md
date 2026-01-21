@@ -7,7 +7,7 @@
 # Type Alias: IsNull\<T\>
 
 ```ts
-type IsNull<T> = T extends null ? true : false;
+type IsNull<T> = T extends null ? true : false
 ```
 
 whether the type is null

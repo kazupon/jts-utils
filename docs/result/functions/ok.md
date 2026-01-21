@@ -7,7 +7,7 @@
 # Function: ok()
 
 ```ts
-function ok<T>(value?): Ok<T>;
+function ok<T>(value?): Ok<T>
 ```
 
 Utility function to create an Ok object for success
@@ -35,5 +35,5 @@ An [Ok](../type-aliases/Ok.md) object
 ```ts
 import { ok } from '@kazupon/jts-utils'
 
-const result = ok(42); // Type is Ok<number>
+const result = ok(42) // Type is Ok<number>
 ```

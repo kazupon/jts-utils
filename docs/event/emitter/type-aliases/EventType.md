@@ -7,7 +7,7 @@
 # Type Alias: EventType
 
 ```ts
-type EventType = string | symbol;
+type EventType = string | symbol
 ```
 
 Event type

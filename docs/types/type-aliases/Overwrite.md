@@ -7,7 +7,7 @@
 # Type Alias: Overwrite\<T, U\>
 
 ```ts
-type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & Pick<U, Extract<keyof U, keyof T>>;
+type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & Pick<U, Extract<keyof U, keyof T>>
 ```
 
 Overwrite properties
@@ -28,7 +28,7 @@ type Original = {
   a: number
   b: string
 }
-type Overwritten = Overwrite<Original, { a: string; b: boolean; }>
+type Overwritten = Overwrite<Original, { a: string; b: boolean }>
 // Resulting type:
 // {
 //   a: string

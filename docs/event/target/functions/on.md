@@ -7,11 +7,7 @@
 # Function: on()
 
 ```ts
-function on<T>(
-   _target,
-   _type,
-   _listenerOrOptions?,
-   _options?): EventTargetStopHandler;
+function on<T>(_target, _type, _listenerOrOptions?, _options?): EventTargetStopHandler
 ```
 
 Attach an event listener to the target

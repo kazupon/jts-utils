@@ -7,7 +7,7 @@
 # Type Alias: IsNever\<T\>
 
 ```ts
-type IsNever<T> = [T] extends [never] ? true : false;
+type IsNever<T> = [T] extends [never] ? true : false
 ```
 
 Check never type
