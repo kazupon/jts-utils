@@ -8,6 +8,10 @@
 
 Event emitter interface
 
+## Extended by
+
+- [`SafeMessagePort`](../../../message/port/interfaces/SafeMessagePort.md)
+
 ## Type Parameters
 
 | Type Parameter                                                                        | Default type | Description    |
@@ -15,6 +19,20 @@ Event emitter interface
 | `Events` _extends_ `Record`\<[`EventType`](../type-aliases/EventType.md), `unknown`\> | `object`     | Event map type |
 
 ## Methods
+
+### dispose()
+
+```ts
+dispose(): void;
+```
+
+Dispose the event emitter and all registered event handlers
+
+#### Returns
+
+`void`
+
+---
 
 ### emit()
 

@@ -14,6 +14,8 @@
 | [event/emitter](event/emitter/index.md) | Event emitter utils           |
 | [event/target](event/target/index.md)   | Event target utils            |
 | [event/wait](event/wait/index.md)       | Event waiting utils           |
+| [message](message/index.md)             | Window message utils module   |
+| [message/port](message/port/index.md)   | Message Port Utilities        |
 | [module](module/index.md)               | Module utilities              |
 | [object](object/index.md)               | Object utilities              |
 | [observer](observer/index.md)           | Observer utilities            |
