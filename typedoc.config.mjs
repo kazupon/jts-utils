@@ -9,6 +9,8 @@ export default {
     './src/abort/index.ts',
     './src/result/index.ts',
     './src/array/index.ts',
+    './src/message/index.ts',
+    './src/message/port.ts',
     './src/event/index.ts',
     './src/event/emitter.ts',
     './src/event/target.ts',

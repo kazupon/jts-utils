@@ -8,6 +8,8 @@ const config: UserConfig = defineConfig({
     'src/array/index.ts',
     'src/string/index.ts',
     'src/object/index.ts',
+    './src/message/index.ts',
+    './src/message/port.ts',
     'src/event/index.ts',
     'src/event/emitter.ts',
     'src/event/target.ts',
