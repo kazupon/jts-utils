@@ -152,6 +152,10 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
    * @returns A function to manually stop the handler before it fires
    */
   once<Key extends keyof Events>(event: Key, handler: EventHandler<Events[Key]>): () => void
+  /**
+   * Dispose the event emitter and all registered event handlers
+   */
+  dispose(): void
 }
 
 /**
@@ -301,11 +305,16 @@ export function Emitter<Events extends Record<EventType, unknown>>(
     return stop
   }
 
+  function dispose(): void {
+    events.clear()
+  }
+
   return Object.freeze({
     on,
     off,
     emit,
     once,
-    [Symbol.dispose]: () => events.clear()
+    dispose,
+    [Symbol.dispose]: dispose
   })
 }
