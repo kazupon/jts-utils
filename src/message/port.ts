@@ -100,6 +100,8 @@ export type SafeMessagePortResult<T = unknown> = Readonly<
  *
  * The returned SafeMessagePort will automatically handle the closing of the `MessagePort` when disposed, and it will also manage event listeners to prevent memory leaks.
  *
+ * The underlying `MessagePort` will be started automatically.
+ *
  * @typeParam T - Message data type
  *
  * @param port - The MessagePort to wrap
@@ -130,6 +132,7 @@ export function safeMessagePort<T = unknown>(port: MessagePort): SafeMessagePort
 
   port.addEventListener('message', onMessage)
   port.addEventListener('messageerror', onMessageError)
+  port.start()
 
   const close = (): void => {
     if (_closed) return
