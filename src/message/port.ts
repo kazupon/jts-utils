@@ -177,6 +177,7 @@ export function safeMessagePort<T = unknown>(port: MessagePort): SafeMessagePort
     },
 
     // Disposable
+    dispose: close,
     [Symbol.dispose]: close
   }
 }
