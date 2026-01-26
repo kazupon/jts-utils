@@ -17,6 +17,6 @@ Event handler map
 
 ## Type Parameters
 
-| Type Parameter                                                        |
-| --------------------------------------------------------------------- |
-| `Events` _extends_ `Record`\<[`EventType`](EventType.md), `unknown`\> |
+| Type Parameter                                                        | Description    |
+| --------------------------------------------------------------------- | -------------- |
+| `Events` _extends_ `Record`\<[`EventType`](EventType.md), `unknown`\> | Event map type |

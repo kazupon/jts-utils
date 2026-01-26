@@ -7,7 +7,7 @@
 # Function: Emitter()
 
 ```ts
-function Emitter<Events>(options?): Readonly<Emittable<Events>>
+function Emitter<Events>(options?): Readonly<Emittable<Events> & Disposable>
 ```
 
 Create a event emitter
@@ -20,9 +20,9 @@ This event emitter forked and inspired from the below:
 
 ## Type Parameters
 
-| Type Parameter                                                                        |
-| ------------------------------------------------------------------------------------- |
-| `Events` _extends_ `Record`\<[`EventType`](../type-aliases/EventType.md), `unknown`\> |
+| Type Parameter                                                                        | Description    |
+| ------------------------------------------------------------------------------------- | -------------- |
+| `Events` _extends_ `Record`\<[`EventType`](../type-aliases/EventType.md), `unknown`\> | Event map type |
 
 ## Parameters
 
@@ -32,6 +32,6 @@ This event emitter forked and inspired from the below:
 
 ## Returns
 
-`Readonly`\<[`Emittable`](../interfaces/Emittable.md)\<`Events`\>\>
+`Readonly`\<[`Emittable`](../interfaces/Emittable.md)\<`Events`\> & `Disposable`\>
 
 An event emitter, which is [Emittable](../interfaces/Emittable.md)

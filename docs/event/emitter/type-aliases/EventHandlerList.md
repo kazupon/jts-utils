@@ -14,6 +14,6 @@ Event handler list
 
 ## Type Parameters
 
-| Type Parameter | Default type |
-| -------------- | ------------ |
-| `T`            | `unknown`    |
+| Type Parameter | Default type | Description        |
+| -------------- | ------------ | ------------------ |
+| `T`            | `unknown`    | Event payload type |

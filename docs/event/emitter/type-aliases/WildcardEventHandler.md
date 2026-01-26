@@ -14,9 +14,9 @@ Wildcard event handler
 
 ## Type Parameters
 
-| Type Parameter | Default type                    |
-| -------------- | ------------------------------- |
-| `T`            | `Record`\<`string`, `unknown`\> |
+| Type Parameter | Default type                    | Description    |
+| -------------- | ------------------------------- | -------------- |
+| `T`            | `Record`\<`string`, `unknown`\> | Event map type |
 
 ## Parameters
 

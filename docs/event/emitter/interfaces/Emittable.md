@@ -10,9 +10,9 @@ Event emitter interface
 
 ## Type Parameters
 
-| Type Parameter                                                                        | Default type |
-| ------------------------------------------------------------------------------------- | ------------ |
-| `Events` _extends_ `Record`\<[`EventType`](../type-aliases/EventType.md), `unknown`\> | `object`     |
+| Type Parameter                                                                        | Default type | Description    |
+| ------------------------------------------------------------------------------------- | ------------ | -------------- |
+| `Events` _extends_ `Record`\<[`EventType`](../type-aliases/EventType.md), `unknown`\> | `object`     | Event map type |
 
 ## Methods
 
@@ -28,9 +28,9 @@ Note Manually firing "\*" handlers should be not supported
 
 #### Type Parameters
 
-| Type Parameter                                   |
-| ------------------------------------------------ |
-| `Key` _extends_ `string` \| `number` \| `symbol` |
+| Type Parameter                                   | Description       |
+| ------------------------------------------------ | ----------------- |
+| `Key` _extends_ `string` \| `number` \| `symbol` | An event type key |
 
 #### Parameters
 
@@ -76,9 +76,9 @@ Unregister an event handler for the event type
 
 ##### Type Parameters
 
-| Type Parameter                                   |
-| ------------------------------------------------ |
-| `Key` _extends_ `string` \| `number` \| `symbol` |
+| Type Parameter                                   | Description       |
+| ------------------------------------------------ | ----------------- |
+| `Key` _extends_ `string` \| `number` \| `symbol` | An event type key |
 
 ##### Parameters
 
@@ -126,9 +126,9 @@ Register an event handler with the event type
 
 ##### Type Parameters
 
-| Type Parameter                                   |
-| ------------------------------------------------ |
-| `Key` _extends_ `string` \| `number` \| `symbol` |
+| Type Parameter                                   | Description       |
+| ------------------------------------------------ | ----------------- |
+| `Key` _extends_ `string` \| `number` \| `symbol` | An event type key |
 
 ##### Parameters
 
@@ -186,9 +186,9 @@ The handler will be automatically unregistered after the first invocation.
 
 ##### Type Parameters
 
-| Type Parameter                                   |
-| ------------------------------------------------ |
-| `Key` _extends_ `string` \| `number` \| `symbol` |
+| Type Parameter                                   | Description       |
+| ------------------------------------------------ | ----------------- |
+| `Key` _extends_ `string` \| `number` \| `symbol` | An event type key |
 
 ##### Parameters
 

@@ -21,6 +21,8 @@ export type EventType = string | symbol
 
 /**
  * Event handler
+ *
+ * @typeParam T - Event payload type
  */
 export type EventHandler<T = unknown> = T extends undefined ? () => void : (payload: T) => void
 
@@ -33,6 +35,8 @@ export interface EventStopHandler extends Disposable {
 
 /**
  * Wildcard event handler
+ *
+ * @typeParam T - Event map type
  */
 export type WildcardEventHandler<T = Record<string, unknown>> = (
   event: keyof T,
@@ -41,16 +45,22 @@ export type WildcardEventHandler<T = Record<string, unknown>> = (
 
 /**
  * Event handler list
+ *
+ * @typeParam T - Event payload type
  */
 export type EventHandlerList<T = unknown> = Array<EventHandler<T>>
 
 /**
  * Wildcard event handler list
+ *
+ * @typeParam T - Event map type
  */
 export type WildcardEventHandlerList<T = Record<string, unknown>> = Array<WildcardEventHandler<T>>
 
 /**
  * Event handler map
+ *
+ * @typeParam Events - Event map type
  */
 export type EventHandlerMap<Events extends Record<EventType, unknown>> = Map<
   keyof Events | '*',
@@ -59,6 +69,8 @@ export type EventHandlerMap<Events extends Record<EventType, unknown>> = Map<
 
 /**
  * Event emitter interface
+ *
+ * @typeParam Events - Event map type
  */
 export interface Emittable<Events extends Record<EventType, unknown> = {}> {
   /**
@@ -78,6 +90,8 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
   /**
    * Register an event handler with the event type
    *
+   * @typeParam Key - An event type key
+   *
    * @param event - An {@link EventType}
    * @param handler - An {@link EventHandler}
    * @returns An {@link EventStopHandler}
@@ -95,6 +109,8 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
   /**
    * Unregister an event handler for the event type
    *
+   * @typeParam Key - An event type key
+   *
    * @param event - An {@link EventType}
    * @param handler - An {@link EventHandler}
    */
@@ -104,6 +120,8 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
    * Invoke all handlers with the event type.
    *
    * Note Manually firing "*" handlers should be not supported
+   *
+   * @typeParam Key - An event type key
    *
    * @param event - An {@link EventType}
    * @param payload - An event payload, optional if the event type is `undefined`
@@ -126,6 +144,8 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
   /**
    * Register a one-time event handler with the event type.
    * The handler will be automatically unregistered after the first invocation.
+   *
+   * @typeParam Key - An event type key
    *
    * @param event - An {@link EventType}
    * @param handler - An {@link EventHandler}
@@ -153,6 +173,8 @@ export interface EmitterOptions {
  * - original repository url: https://github.com/developit/mitt
  * - code url: https://github.com/developit/mitt/blob/master/src/index.ts
  * - author: Jason Miller (https://github.com/developit)
+ *
+ * @typeParam Events - Event map type
  *
  * @param options - An optional {@link EmitterOptions}
  * @returns An event emitter, which is {@link Emittable}
