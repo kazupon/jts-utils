@@ -1,10 +1,10 @@
 import { test, expect, vi, expectTypeOf } from 'vitest'
-import { createEmitter } from './index.ts'
+import { Emitter } from './index.ts'
 
 test('basic', () => {
   const handler = vi.fn()
 
-  const emitter = createEmitter<{ foo: number }>()
+  const emitter = Emitter<{ foo: number }>()
   emitter.on('foo', handler)
   emitter.emit('foo', 1)
 
@@ -20,7 +20,7 @@ test('mlutiple register', () => {
   const handler1 = vi.fn()
   const handler2 = vi.fn()
 
-  const emitter = createEmitter<{ foo: string }>()
+  const emitter = Emitter<{ foo: string }>()
   emitter.on('foo', handler1)
   emitter.on('foo', handler2)
   emitter.emit('foo', 'hello')
@@ -42,7 +42,7 @@ test('multiple event', () => {
   const handler1 = vi.fn()
   const handler2 = vi.fn()
 
-  const emitter = createEmitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
+  const emitter = Emitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
   emitter.on('foo', handler1)
   emitter.on('bar', handler2)
   emitter.on('bar', payload => {
@@ -70,14 +70,14 @@ test('* event', () => {
   const handler1 = vi.fn()
   const handler2 = vi.fn()
 
-  const emitter = createEmitter<{ foo: string; bar: number }>()
+  const emitter = Emitter<{ foo: string; bar: number }>()
   emitter.on('*', handler1)
   emitter.emit('foo', 'hello')
   emitter.emit('bar', 1)
 
   expect(handler1).not.toBeCalled()
 
-  const emitter2 = createEmitter<{ foo: string; bar: number }>({ disableWildcard: false })
+  const emitter2 = Emitter<{ foo: string; bar: number }>({ disableWildcard: false })
   emitter2.on('*', handler2)
   emitter2.emit('foo', 'hello')
   emitter2.emit('bar', 1)
@@ -89,7 +89,7 @@ test('* event', () => {
 })
 
 test('typecheck', () => {
-  const emitter = createEmitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
+  const emitter = Emitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
   emitter.on('foo', payload => {
     expectTypeOf(payload).toEqualTypeOf<string>()
   })
@@ -104,7 +104,7 @@ test('typecheck', () => {
 
 test('dispose stop handler', () => {
   const handler = vi.fn()
-  const emitter = createEmitter<{ foo: string }>()
+  const emitter = Emitter<{ foo: string }>()
 
   // using block to test dispose
   {
@@ -122,7 +122,7 @@ test('dispose stop handler', () => {
 test('once basic', () => {
   const handler = vi.fn()
 
-  const emitter = createEmitter<{ foo: number }>()
+  const emitter = Emitter<{ foo: number }>()
   emitter.once('foo', handler)
   emitter.emit('foo', 1)
   emitter.emit('foo', 2)
@@ -134,7 +134,7 @@ test('once basic', () => {
 test('once manual stop', () => {
   const handler = vi.fn()
 
-  const emitter = createEmitter<{ foo: number }>()
+  const emitter = Emitter<{ foo: number }>()
   const stop = emitter.once('foo', handler)
 
   stop()
@@ -146,7 +146,7 @@ test('once manual stop', () => {
 test('once * event', () => {
   const handler = vi.fn()
 
-  const emitter = createEmitter<{ foo: string; bar: number }>({ disableWildcard: false })
+  const emitter = Emitter<{ foo: string; bar: number }>({ disableWildcard: false })
   emitter.once('*', handler)
   emitter.emit('foo', 'hello')
   emitter.emit('bar', 1)
@@ -156,7 +156,7 @@ test('once * event', () => {
 })
 
 test('once typecheck', () => {
-  const emitter = createEmitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
+  const emitter = Emitter<{ foo: string; bar: { greeting: string }; baz: undefined }>()
   emitter.once('foo', payload => {
     expectTypeOf(payload).toEqualTypeOf<string>()
   })
@@ -173,7 +173,7 @@ test('once multiple handlers', () => {
   const handler1 = vi.fn()
   const handler2 = vi.fn()
 
-  const emitter = createEmitter<{ foo: string }>()
+  const emitter = Emitter<{ foo: string }>()
   emitter.once('foo', handler1)
   emitter.once('foo', handler2)
   emitter.emit('foo', 'hello')
@@ -187,7 +187,7 @@ test('once mixed with on', () => {
   const onHandler = vi.fn()
   const onceHandler = vi.fn()
 
-  const emitter = createEmitter<{ foo: string }>()
+  const emitter = Emitter<{ foo: string }>()
   emitter.on('foo', onHandler)
   emitter.once('foo', onceHandler)
 

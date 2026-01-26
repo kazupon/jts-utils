@@ -142,3 +142,69 @@ Register an event handler with the event type
 [`EventStopHandler`](EventStopHandler.md)
 
 An [EventStopHandler](EventStopHandler.md)
+
+---
+
+### once()
+
+#### Call Signature
+
+```ts
+once(event, handler): () => void;
+```
+
+Register a one-time wildcard event handler that receives all events.
+The handler will be automatically unregistered after the first invocation.
+
+##### Parameters
+
+| Parameter | Type                                                                          | Description                                                       |
+| --------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `event`   | `"*"`                                                                         | The wildcard event type "\*"                                      |
+| `handler` | [`WildcardEventHandler`](../type-aliases/WildcardEventHandler.md)\<`Events`\> | A [WildcardEventHandler](../type-aliases/WildcardEventHandler.md) |
+
+##### Returns
+
+A function to manually stop the handler before it fires
+
+```ts
+(): void;
+```
+
+###### Returns
+
+`void`
+
+#### Call Signature
+
+```ts
+once<Key>(event, handler): () => void;
+```
+
+Register a one-time event handler with the event type.
+The handler will be automatically unregistered after the first invocation.
+
+##### Type Parameters
+
+| Type Parameter                                   |
+| ------------------------------------------------ |
+| `Key` _extends_ `string` \| `number` \| `symbol` |
+
+##### Parameters
+
+| Parameter | Type                                                                   | Description                                        |
+| --------- | ---------------------------------------------------------------------- | -------------------------------------------------- |
+| `event`   | `Key`                                                                  | An [EventType](../type-aliases/EventType.md)       |
+| `handler` | [`EventHandler`](../type-aliases/EventHandler.md)\<`Events`\[`Key`\]\> | An [EventHandler](../type-aliases/EventHandler.md) |
+
+##### Returns
+
+A function to manually stop the handler before it fires
+
+```ts
+(): void;
+```
+
+###### Returns
+
+`void`

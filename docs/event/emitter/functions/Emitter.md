@@ -2,12 +2,12 @@
 
 ---
 
-[@kazupon/jts-utils](../../../index.md) / [event/emitter](../index.md) / createEmitter
+[@kazupon/jts-utils](../../../index.md) / [event/emitter](../index.md) / Emitter
 
-# Function: createEmitter()
+# Function: Emitter()
 
 ```ts
-function createEmitter<Events>(): Readonly<Emittable<Events>>
+function Emitter<Events>(options?): Readonly<Emittable<Events>>
 ```
 
 Create a event emitter
@@ -23,6 +23,12 @@ This event emitter forked and inspired from the below:
 | Type Parameter                                                                        |
 | ------------------------------------------------------------------------------------- |
 | `Events` _extends_ `Record`\<[`EventType`](../type-aliases/EventType.md), `unknown`\> |
+
+## Parameters
+
+| Parameter  | Type                                                | Description                                                   |
+| ---------- | --------------------------------------------------- | ------------------------------------------------------------- |
+| `options?` | [`EmitterOptions`](../interfaces/EmitterOptions.md) | An optional [EmitterOptions](../interfaces/EmitterOptions.md) |
 
 ## Returns
 

@@ -16,15 +16,21 @@ import { createEmitter, waitOnce } from '@kazupon/jts-utils/event'
 
 ## References
 
-### createEmitter
-
-Re-exports [createEmitter](emitter/functions/createEmitter.md)
-
----
-
 ### Emittable
 
 Re-exports [Emittable](emitter/interfaces/Emittable.md)
+
+---
+
+### Emitter
+
+Re-exports [Emitter](emitter/functions/Emitter.md)
+
+---
+
+### EmitterOptions
+
+Re-exports [EmitterOptions](emitter/interfaces/EmitterOptions.md)
 
 ---
 

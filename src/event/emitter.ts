@@ -157,7 +157,7 @@ export interface EmitterOptions {
  * @param options - An optional {@link EmitterOptions}
  * @returns An event emitter, which is {@link Emittable}
  */
-export function createEmitter<Events extends Record<EventType, unknown>>(
+export function Emitter<Events extends Record<EventType, unknown>>(
   options?: EmitterOptions
 ): Readonly<Emittable<Events>> {
   const disableWildcard = options?.disableWildcard ?? true
