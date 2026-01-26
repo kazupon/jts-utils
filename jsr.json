@@ -11,6 +11,8 @@
     "./array": "./src/array/index.ts",
     "./object": "./src/object/index.ts",
     "./result": "./src/result/index.ts",
+    "./message": "./src/message/index.ts",
+    "./message/port": "./src/message/port.ts",
     "./event": "./src/event/index.ts",
     "./event/emitter": "./src/event/emitter.ts",
     "./event/target": "./src/event/target.ts",

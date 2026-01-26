@@ -106,6 +106,20 @@
       "browser": "./dist/event/wait.js",
       "default": "./dist/event/wait.js"
     },
+    "./message": {
+      "types": "./dist/message/index.d.ts",
+      "import": "./dist/message/index.js",
+      "require": "./dist/message/index.js",
+      "browser": "./dist/message/index.js",
+      "default": "./dist/message/index.js"
+    },
+    "./message/port": {
+      "types": "./dist/message/port.d.ts",
+      "import": "./dist/message/port.js",
+      "require": "./dist/message/port.js",
+      "browser": "./dist/message/port.js",
+      "default": "./dist/message/port.js"
+    },
     "./types": {
       "types": "./dist/types/index.d.ts"
     },
