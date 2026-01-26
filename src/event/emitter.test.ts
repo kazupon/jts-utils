@@ -198,3 +198,28 @@ test('once mixed with on', () => {
   expect(onceHandler).toBeCalledTimes(1)
   expect(onceHandler).toHaveBeenNthCalledWith(1, 'first')
 })
+
+test('dispose emitter', () => {
+  const handler = vi.fn()
+  const emitter = Emitter<{ foo: string }>()
+
+  emitter.on('foo', handler)
+  emitter.emit('foo', 'hello')
+  expect(handler).toBeCalledTimes(1)
+
+  emitter[Symbol.dispose]()
+  emitter.emit('foo', 'world')
+  expect(handler).toBeCalledTimes(1) // 呼ばれない
+})
+
+test('dispose emitter with using', () => {
+  const handler = vi.fn()
+
+  {
+    using emitter = Emitter<{ foo: string }>()
+    emitter.on('foo', handler)
+    emitter.emit('foo', 'hello')
+    expect(handler).toBeCalledTimes(1)
+  }
+  // スコープを抜けると自動的に dispose される
+})
