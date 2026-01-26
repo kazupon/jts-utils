@@ -16,16 +16,17 @@ import { createEmitter } from '@kazupon/jts-utils/event/emitter'
 
 ## Functions
 
-| Function                                    | Description            |
-| ------------------------------------------- | ---------------------- |
-| [createEmitter](functions/createEmitter.md) | Create a event emitter |
+| Function                        | Description            |
+| ------------------------------- | ---------------------- |
+| [Emitter](functions/Emitter.md) | Create a event emitter |
 
 ## Interfaces
 
-| Interface                                          | Description             |
-| -------------------------------------------------- | ----------------------- |
-| [Emittable](interfaces/Emittable.md)               | Event emitter interface |
-| [EventStopHandler](interfaces/EventStopHandler.md) | Event stop handler      |
+| Interface                                          | Description                  |
+| -------------------------------------------------- | ---------------------------- |
+| [Emittable](interfaces/Emittable.md)               | Event emitter interface      |
+| [EmitterOptions](interfaces/EmitterOptions.md)     | An options for createEmitter |
+| [EventStopHandler](interfaces/EventStopHandler.md) | Event stop handler           |
 
 ## Type Aliases
 
