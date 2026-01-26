@@ -159,7 +159,7 @@ export interface EmitterOptions {
  */
 export function Emitter<Events extends Record<EventType, unknown>>(
   options?: EmitterOptions
-): Readonly<Emittable<Events>> {
+): Readonly<Emittable<Events> & Disposable> {
   const disableWildcard = options?.disableWildcard ?? true
 
   type GenericEventHandler = EventHandler<Events[keyof Events]> | WildcardEventHandler<Events>
@@ -283,6 +283,7 @@ export function Emitter<Events extends Record<EventType, unknown>>(
     on,
     off,
     emit,
-    once
+    once,
+    [Symbol.dispose]: () => events.clear()
   })
 }
