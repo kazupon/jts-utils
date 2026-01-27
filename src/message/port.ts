@@ -32,7 +32,6 @@ export type MessagePortEvents<T = unknown> = {
    * `messageerror` event
    */
   messageerror: MessageEvent
-  [key: string]: unknown
 }
 
 /**
