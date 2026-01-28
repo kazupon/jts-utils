@@ -18,12 +18,6 @@ Message port events
 | -------------- | ------------ | ----------------- |
 | `T`            | `unknown`    | Message data type |
 
-## Indexable
-
-```ts
-[key: string]: unknown
-```
-
 ## Properties
 
 | Property                                 | Type                  | Description          |

@@ -134,7 +134,9 @@ export function safeMessagePort<T = unknown>(port: MessagePort): SafeMessagePort
   port.start()
 
   const close = (): void => {
-    if (_closed) return
+    if (_closed) {
+      return
+    }
     _closed = true
     port.removeEventListener('message', onMessage)
     port.removeEventListener('messageerror', onMessageError)
