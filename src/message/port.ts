@@ -155,7 +155,8 @@ export function safeMessagePort<T = unknown>(port: MessagePort): SafeMessagePort
     postMessage: (message: T, transfer?: Transferable[]) => {
       port.postMessage(message, transfer ?? [])
     },
-    start: () => port.start(),
+    // Use bind instead of arrow function to avoid closure memory leak
+    start: port.start.bind(port),
     close,
 
     // EventTarget methods (passthrough)
