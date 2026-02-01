@@ -39,7 +39,11 @@ const config: ReturnType<typeof defineConfig> = defineConfig(
   oxlint({
     presets: ['typescript'],
     configFile: './.oxlintrc.json'
-  })
+  }),
+  {
+    // ignore for specific files
+    ignores: ['src/url/utils.ts']
+  }
 )
 
 export default config
