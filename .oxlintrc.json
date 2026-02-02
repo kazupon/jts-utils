@@ -23,7 +23,7 @@
     "**/node_modules",
     "**/dist",
     ".vscode/**/*.json",
-    "./playground",
+    "playground/**",
     "**/tsconfig*.json",
     "./docs",
     "CHANGELOG.md",

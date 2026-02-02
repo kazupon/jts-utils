@@ -1,5 +1,5 @@
 {
   "imports": {
-    "@kazupon/jts-utils": "jsr:@kazupon/jts-utils@^0.4.0"
+    "@kazupon/jts-utils": "jsr:@kazupon/jts-utils@^0.15.0"
   }
 }

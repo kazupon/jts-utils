@@ -1,16 +1,31 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
-    "jsr:@kazupon/jts-utils@0.4": "0.4.0"
+    "jsr:@kazupon/jts-utils@0.15": "0.15.0",
+    "npm:@vue/reactivity@^3.5.27": "3.5.27"
   },
   "jsr": {
-    "@kazupon/jts-utils@0.4.0": {
-      "integrity": "bcc6bd325997c909225b08ab2085b7e134f67ba08240e86ec8b5fba5832f46b7"
+    "@kazupon/jts-utils@0.15.0": {
+      "integrity": "090b552125397831474a52b4237706d9f31fc71327c9744495d2c6c03ce266f5",
+      "dependencies": [
+        "npm:@vue/reactivity"
+      ]
+    }
+  },
+  "npm": {
+    "@vue/reactivity@3.5.27": {
+      "integrity": "sha512-vvorxn2KXfJ0nBEnj4GYshSgsyMNFnIQah/wczXlsNXt+ijhugmW+PpJ2cNPe4V6jpnBcs0MhCODKllWG+nvoQ==",
+      "dependencies": [
+        "@vue/shared"
+      ]
+    },
+    "@vue/shared@3.5.27": {
+      "integrity": "sha512-dXr/3CgqXsJkZ0n9F3I4elY8wM9jMJpP3pvRG52r6m0tu/MsAFIe6JpXVGeNMd/D9F4hQynWT8Rfuj0bdm9kFQ=="
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@kazupon/jts-utils@0.4"
+      "jsr:@kazupon/jts-utils@0.15"
     ]
   }
 }
