@@ -25,7 +25,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@10.28.1",
+  "packageManager": "pnpm@10.28.2",
   "engines": {
     "node": ">= 20"
   },
@@ -144,15 +144,15 @@
     "fix:eslint": "eslint . --fix",
     "fix:knip": "knip --fix --no-exit-code",
     "fix:oxfmt": "oxfmt . --config ./node_modules/@kazupon/prettier-config/index.json --no-error-on-unmatched-pattern",
-    "fix:oxlint": "oxlint --type-aware --fix",
+    "fix:oxlint": "oxlint --type-aware --type-check --fix",
     "jsr": "pnpx pkg-to-jsr",
     "lint": "pnpm run --color \"/lint:.*/\"",
+    "lint:deno": "deno check src",
     "lint:eslint": "eslint . --cache",
     "lint:jsr": "jsr publish --dry-run --allow-dirty",
     "lint:knip": "knip",
     "lint:oxfmt": "oxfmt . --check --config ./node_modules/@kazupon/prettier-config/index.json",
-    "lint:oxlint": "oxlint --type-aware",
-    "lint:typecheck": "pnpm run --color \"/typecheck:.*/\"",
+    "lint:oxlint": "oxlint --type-aware --type-check",
     "prepack": "pnpm build",
     "prepare": "git config --local core.hooksPath .githooks",
     "release": "bumpp --commit \"release: v%s\" --all --push --tag",
@@ -160,9 +160,7 @@
     "test:browser": "vitest run --browser.provider=playwright --browser.name=chromium --browser.headless",
     "test:bun": "bunx vitest run",
     "test:deno": "DENO_FUTURE=1 deno run -A npm:vitest run",
-    "test:unit": "vitest run --typecheck",
-    "typecheck:deno": "deno check src",
-    "typecheck:tsgo": "tsgo --noEmit --diagnostics"
+    "test:unit": "vitest run --typecheck"
   },
   "peerDependencies": {
     "@vue/reactivity": "^3.4"
@@ -177,46 +175,46 @@
     "@kazupon/eslint-config": "^0.44.0",
     "@kazupon/eslint-plugin": "^0.7.1",
     "@kazupon/prettier-config": "^0.2.0",
-    "@types/node": "^25.0.10",
+    "@types/node": "^25.1.0",
     "@typescript/native-preview": "7.0.0-dev.20260124.1",
     "@vitest/browser": "^4.0.18",
     "@vue/reactivity": "^3.5.27",
     "bumpp": "^10.4.0",
-    "deno": "^2.6.6",
+    "deno": "^2.6.7",
     "eslint": "^9.39.2",
-    "eslint-plugin-jsdoc": "^62.0.0",
+    "eslint-plugin-jsdoc": "^62.5.0",
     "eslint-plugin-jsonc": "^2.21.0",
     "eslint-plugin-markdown-preferences": "^0.40.2",
-    "eslint-plugin-oxlint": "^1.41.0",
+    "eslint-plugin-oxlint": "^1.42.0",
     "eslint-plugin-regexp": "^3.0.0",
     "eslint-plugin-toml": "^0.13.1",
     "eslint-plugin-yml": "^3.0.0",
     "gh-changelogen": "^0.2.8",
-    "jsr": "^0.14.0",
+    "jsr": "^0.14.2",
     "jsr-exports-lint": "^0.4.2",
     "knip": "^5.82.1",
     "lint-staged": "^16.2.7",
-    "oxfmt": "^0.26.0",
-    "oxlint": "^1.41.0",
-    "oxlint-tsgolint": "^0.11.1",
+    "oxfmt": "^0.27.0",
+    "oxlint": "^1.42.0",
+    "oxlint-tsgolint": "^0.11.4",
     "playwright-core": "1.58.0",
     "publint": "^0.3.17",
-    "tsdown": "^0.20.0",
+    "tsdown": "^0.20.1",
     "typedoc": "^0.28.16",
     "typedoc-plugin-markdown": "^4.9.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.1",
+    "typescript-eslint": "^8.54.0",
     "vitest": "^4.0.18"
   },
   "prettier": "@kazupon/prettier-config",
   "lint-staged": {
     "*.ts?(x)": [
       "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json --no-error-on-unmatched-pattern",
-      "oxlint --config .oxlintrc.json --type-aware --fix"
+      "oxlint --config .oxlintrc.json --type-aware --type-check --fix"
     ],
     "*.{js,mjs,cjs}": [
       "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json --no-error-on-unmatched-pattern",
-      "oxlint --config .oxlintrc.json --type-aware --fix"
+      "oxlint --config .oxlintrc.json --fix"
     ],
     "*.{json,jsonc,json5,md,yml,yaml}": [
       "oxfmt --config ./node_modules/@kazupon/prettier-config/index.json --no-error-on-unmatched-pattern",

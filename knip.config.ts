@@ -8,6 +8,7 @@ const config: KnipConfig = {
     '@vitest/browser',
     '@kazupon/prettier-config',
     '@kazupon/eslint-plugin',
+    '@typescript/native-preview',
     'deno'
   ]
 }
