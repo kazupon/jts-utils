@@ -176,7 +176,7 @@
     "@kazupon/eslint-plugin": "^0.7.1",
     "@kazupon/prettier-config": "^0.2.0",
     "@types/node": "^25.1.0",
-    "@typescript/native-preview": "7.0.0-dev.20260127.1",
+    "@typescript/native-preview": "7.0.0-dev.20260128.1",
     "@vitest/browser": "^4.0.18",
     "@vue/reactivity": "^3.5.27",
     "bumpp": "^10.4.0",
