@@ -36,6 +36,13 @@
     "docs"
   ],
   "exports": {
+    "./url": {
+      "types": "./dist/url/index.d.ts",
+      "import": "./dist/url/index.js",
+      "require": "./dist/url/index.js",
+      "browser": "./dist/url/index.js",
+      "default": "./dist/url/index.js"
+    },
     "./abort": {
       "types": "./dist/abort/index.d.ts",
       "import": "./dist/abort/index.js",
