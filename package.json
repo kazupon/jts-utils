@@ -204,7 +204,7 @@
     "oxfmt": "^0.27.0",
     "oxlint": "^1.42.0",
     "oxlint-tsgolint": "^0.11.4",
-    "playwright-core": "1.58.0",
+    "playwright-core": "1.58.1",
     "publint": "^0.3.17",
     "tsdown": "^0.20.1",
     "typedoc": "^0.28.16",
