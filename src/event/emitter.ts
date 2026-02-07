@@ -24,7 +24,11 @@ export type EventType = string | symbol
  *
  * @typeParam T - Event payload type
  */
-export type EventHandler<T = unknown> = T extends undefined ? () => void : (payload: T) => void
+export type EventHandler<T = unknown> = T extends undefined
+  ? () => void
+  : T extends unknown[]
+    ? (...args: T) => void
+    : (payload: T) => void
 
 /**
  * Event stop handler
@@ -128,7 +132,11 @@ export interface Emittable<Events extends Record<EventType, unknown> = {}> {
    */
   emit<Key extends keyof Events>(
     event: Key,
-    ...payload: Events[Key] extends undefined ? [] : [payload: Events[Key]]
+    ...payload: Events[Key] extends undefined
+      ? []
+      : Events[Key] extends unknown[]
+        ? Events[Key]
+        : [payload: Events[Key]]
   ): void
 
   /**
@@ -185,7 +193,7 @@ export interface EmitterOptions {
  */
 export function Emitter<Events extends Record<EventType, unknown>>(
   options?: EmitterOptions
-): Readonly<Emittable<Events> & Disposable> {
+): Emittable<Events> & Disposable {
   const disableWildcard = options?.disableWildcard ?? true
 
   type GenericEventHandler = EventHandler<Events[keyof Events]> | WildcardEventHandler<Events>
@@ -258,16 +266,19 @@ export function Emitter<Events extends Record<EventType, unknown>>(
    */
   function emit<Key extends keyof Events>(
     event: Key,
-    ...args: Events[Key] extends undefined ? [] : [payload: Events[Key]]
+    ...args: Events[Key] extends undefined
+      ? []
+      : Events[Key] extends unknown[]
+        ? Events[Key]
+        : [payload: Events[Key]]
   ): void {
-    const payload = args[0] as Events[keyof Events]
     ;((events.get(event) || []) as EventHandlerList<Events[keyof Events]>)
       .slice()
-      .map(handler => handler(payload))
+      .map(handler => (handler as (...a: unknown[]) => void)(...args))
     if (disableWildcard) {
       return
     }
-    ;(events.get('*') || []).slice().map(handler => handler(event, payload))
+    ;(events.get('*') || []).slice().map(handler => handler(event, args[0] as Events[keyof Events]))
   }
 
   /**
@@ -316,5 +327,5 @@ export function Emitter<Events extends Record<EventType, unknown>>(
     once,
     dispose,
     [Symbol.dispose]: dispose
-  })
+  }) as Emittable<Events> & Disposable
 }

@@ -146,10 +146,10 @@ export function safeMessagePort<T = unknown>(port: MessagePort): SafeMessagePort
 
   return {
     // Emittable methods
-    on: _emitter.on,
-    off: _emitter.off,
-    emit: _emitter.emit,
-    once: _emitter.once,
+    on: _emitter.on.bind(_emitter),
+    off: _emitter.off.bind(_emitter),
+    emit: _emitter.emit.bind(_emitter),
+    once: _emitter.once.bind(_emitter),
 
     // MessagePort methods
     postMessage: (message: T, transfer?: Transferable[]) => {

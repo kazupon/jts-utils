@@ -1,4 +1,4 @@
-import { test, expect, vi, expectTypeOf } from 'vitest'
+import { expect, expectTypeOf, test, vi } from 'vitest'
 import { Emitter } from './index.ts'
 
 test('basic', () => {
