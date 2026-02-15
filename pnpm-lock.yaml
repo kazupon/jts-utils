@@ -111,6 +111,25 @@ importers:
         specifier: ^4.0.18
         version: 4.0.18(@types/node@25.1.0)(jiti@2.6.1)(yaml@2.8.2)
 
+  playground/bun:
+    dependencies:
+      '@kazupon/jts-utils':
+        specifier: ^0.16.0
+        version: 0.16.0(@vue/reactivity@3.5.27)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+    devDependencies:
+      '@types/bun':
+        specifier: latest
+        version: 1.3.9
+
+  playground/node:
+    dependencies:
+      '@kazupon/jts-utils':
+        specifier: ^0.16.0
+        version: 0.16.0(@vue/reactivity@3.5.27)
+
 packages:
 
   '@babel/generator@7.28.5':
@@ -567,6 +586,15 @@ packages:
     engines: {node: '>= 20'}
     peerDependencies:
       eslint: ^9.0.0
+
+  '@kazupon/jts-utils@0.16.0':
+    resolution: {integrity: sha512-TK73ZbNHrunaxOUHS61orUZyqh8qFMTjsArPqOsTitVSP6AYWGtZ7sOAYWzUYDRlcP7l39jS7VG4r1vuAFAc0Q==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      '@vue/reactivity': ^3.4
+    peerDependenciesMeta:
+      '@vue/reactivity':
+        optional: true
 
   '@kazupon/jts-utils@0.7.1':
     resolution: {integrity: sha512-3oCZH5w+JPAzD/24DxylJGrnqUaq3pt/v5PzxAbCJz3YQ3yxiFm5ZqIMM2cgAewtO9v5EnCtGIJ9/DYw+QcW/w==}
@@ -1168,6 +1196,9 @@ packages:
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
 
+  '@types/bun@1.3.9':
+    resolution: {integrity: sha512-KQ571yULOdWJiMH+RIWIOZ7B2RXQGpL1YQrBtLIV3FqDcCu6FsbFUBwhdKUlCKUpS3PJDsHlJ1QKlpxoVR+xtw==}
+
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
@@ -1461,6 +1492,9 @@ packages:
     resolution: {integrity: sha512-VzJhB4iyZ04w99HreEvXJY/lxzApnE/PRbcFY4cKnOUSRVbRbAf0AIU0DeavrkffW+mclJlkmnQYn9NdwcBk1g==}
     engines: {node: '>=18'}
     hasBin: true
+
+  bun-types@1.3.9:
+    resolution: {integrity: sha512-+UBWWOakIP4Tswh0Bt0QD0alpTY8cb5hvgiYeWCMet9YukHbzuruIEeXC2D7nMJPB12kbh8C7XJykSexEqGKJg==}
 
   c12@3.3.3:
     resolution: {integrity: sha512-750hTRvgBy5kcMNPdh95Qo+XUBeGo8C7nsKSmedDmaQI+E0r82DwHeM6vBewDe4rGFbnxoa4V9pw+sPh5+Iz8Q==}
@@ -3218,6 +3252,10 @@ snapshots:
       '@eslint/core': 0.17.0
       eslint: 9.39.2(jiti@2.6.1)
 
+  '@kazupon/jts-utils@0.16.0(@vue/reactivity@3.5.27)':
+    optionalDependencies:
+      '@vue/reactivity': 3.5.27
+
   '@kazupon/jts-utils@0.7.1(@typescript/native-preview@7.0.0-dev.20260207.1)(@vue/reactivity@3.5.27)(oxc-resolver@11.16.0)(publint@0.3.17)(typescript@5.9.3)(unrun@0.2.26(synckit@0.11.11))':
     dependencies:
       tsdown: 0.15.12(@typescript/native-preview@7.0.0-dev.20260207.1)(oxc-resolver@11.16.0)(publint@0.3.17)(typescript@5.9.3)(unrun@0.2.26(synckit@0.11.11))
@@ -3595,6 +3633,10 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@types/bun@1.3.9':
+    dependencies:
+      bun-types: 1.3.9
+
   '@types/chai@5.2.3':
     dependencies:
       '@types/deep-eql': 4.0.2
@@ -3947,6 +3989,10 @@ snapshots:
       yaml: 2.8.2
     transitivePeerDependencies:
       - magicast
+
+  bun-types@1.3.9:
+    dependencies:
+      '@types/node': 25.1.0
 
   c12@3.3.3:
     dependencies:
