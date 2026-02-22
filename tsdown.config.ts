@@ -19,6 +19,7 @@ const config: UserConfig = defineConfig({
     'src/module/index.ts',
     'src/types/index.ts',
     'src/abort/index.ts',
+    'src/timeout/index.ts',
     'src/types/vue.ts'
   ],
   publint: true,

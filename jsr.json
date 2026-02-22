@@ -15,6 +15,7 @@
     "./message/port": "./src/message/port.ts",
     "./event": "./src/event/index.ts",
     "./url": "./src/url/index.ts",
+    "./timeout": "./src/timeout/index.ts",
     "./event/emitter": "./src/event/emitter.ts",
     "./event/target": "./src/event/target.ts",
     "./event/wait": "./src/event/wait.ts",
