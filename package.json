@@ -50,6 +50,13 @@
       "browser": "./dist/abort/index.js",
       "default": "./dist/abort/index.js"
     },
+    "./timeout": {
+      "types": "./dist/timeout/index.d.ts",
+      "import": "./dist/timeout/index.js",
+      "require": "./dist/timeout/index.js",
+      "browser": "./dist/timeout/index.js",
+      "default": "./dist/timeout/index.js"
+    },
     "./array": {
       "types": "./dist/array/index.d.ts",
       "import": "./dist/array/index.js",
