@@ -41,12 +41,16 @@ export type MessagePortEvents<T = unknown> = {
  */
 export interface SafeMessagePort<T = unknown> extends Emittable<MessagePortEvents<T>>, Disposable {
   /**
+   * The underlying `MessagePort` instance
+   */
+  raw: MessagePort
+  /**
    * Post a message through the port
    *
    * @param message - The message to post
    * @param transfer - Optional transferable objects
    */
-  postMessage(message: T, transfer?: Transferable[]): void
+  postMessage(message: any, transfer?: Transferable[]): void
 
   /**
    * Start receiving messages on this port
@@ -145,6 +149,7 @@ export function safeMessagePort<T = unknown>(port: MessagePort): SafeMessagePort
   }
 
   return {
+    raw: port,
     // Emittable methods
     on: _emitter.on.bind(_emitter),
     off: _emitter.off.bind(_emitter),

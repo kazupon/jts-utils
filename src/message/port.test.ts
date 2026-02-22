@@ -1,4 +1,4 @@
-import { test, expect, vi, describe, expectTypeOf } from 'vitest'
+import { describe, expect, expectTypeOf, test, vi } from 'vitest'
 import { safeMessagePort } from './port.ts'
 
 describe('safeMessagePort', () => {
@@ -148,6 +148,12 @@ describe('safeMessagePort', () => {
 
       safe.onmessage = handler
       expect(safe.onmessage).toBe(handler)
+    })
+
+    test('`raw` property exposes the original MessagePort', () => {
+      const { port1 } = createPortPair()
+      const safe = safeMessagePort(port1)
+      expect(safe.raw).toBe(port1)
     })
   })
 
