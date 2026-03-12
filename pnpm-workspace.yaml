@@ -6,6 +6,9 @@ minimumReleaseAgeExclude:
   - '@kazupon/eslint-config'
   - '@kazupon/eslint-plugin'
   - jsr-exports-lint
+  - eslint-plugin-oxlint
+  - deno
+  - eslint-plugin-jsdoc
 
 onlyBuiltDependencies:
   - deno
