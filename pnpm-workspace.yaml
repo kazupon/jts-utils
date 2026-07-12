@@ -9,6 +9,8 @@ minimumReleaseAgeExclude:
   - eslint-plugin-oxlint
   - deno
   - eslint-plugin-jsdoc
+  # Renovate security update: vitest@4.1.0
+  - vitest@4.1.0
 
 onlyBuiltDependencies:
   - deno
