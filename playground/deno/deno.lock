@@ -1,31 +1,31 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@kazupon/jts-utils@0.15": "0.15.0",
-    "npm:@vue/reactivity@^3.5.27": "3.5.27"
+    "jsr:@kazupon/jts-utils@0.17": "0.17.0",
+    "npm:@vue/reactivity@^3.5.28": "3.5.40"
   },
   "jsr": {
-    "@kazupon/jts-utils@0.15.0": {
-      "integrity": "090b552125397831474a52b4237706d9f31fc71327c9744495d2c6c03ce266f5",
+    "@kazupon/jts-utils@0.17.0": {
+      "integrity": "9f12ec68041e6f16a10f10022601a7fcf0e5b093e540b4423bf3eb43d15f2bc1",
       "dependencies": [
         "npm:@vue/reactivity"
       ]
     }
   },
   "npm": {
-    "@vue/reactivity@3.5.27": {
-      "integrity": "sha512-vvorxn2KXfJ0nBEnj4GYshSgsyMNFnIQah/wczXlsNXt+ijhugmW+PpJ2cNPe4V6jpnBcs0MhCODKllWG+nvoQ==",
+    "@vue/reactivity@3.5.40": {
+      "integrity": "sha512-B7ot9UlUZOi1zbq61/LvE88ZLTV8IlajTdiZTAEiDQgrnIMIZoPr9kGw0Zw46ObW62O9+H/Be3kMbfb7kYPQZA==",
       "dependencies": [
         "@vue/shared"
       ]
     },
-    "@vue/shared@3.5.27": {
-      "integrity": "sha512-dXr/3CgqXsJkZ0n9F3I4elY8wM9jMJpP3pvRG52r6m0tu/MsAFIe6JpXVGeNMd/D9F4hQynWT8Rfuj0bdm9kFQ=="
+    "@vue/shared@3.5.40": {
+      "integrity": "sha512-WxnBtruIqOoV3rA4jeKDWzrYI5h7Cp4+pjwDi8kWGHz+IslhiN+wguLVVhtv2l8VoU02rzDCVfDjgCl1lNpZVg=="
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@kazupon/jts-utils@0.15"
+      "jsr:@kazupon/jts-utils@0.17"
     ]
   }
 }
